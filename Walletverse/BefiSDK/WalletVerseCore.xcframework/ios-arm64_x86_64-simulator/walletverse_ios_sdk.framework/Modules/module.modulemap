@@ -1,0 +1,11 @@
+framework module walletverse_ios_sdk {
+  umbrella header "walletverse_ios_sdk.h"
+
+  export *
+  module * { export * }
+}
+
+module walletverse_ios_sdk.Swift {
+  header "walletverse_ios_sdk-Swift.h"
+  requires objc
+}

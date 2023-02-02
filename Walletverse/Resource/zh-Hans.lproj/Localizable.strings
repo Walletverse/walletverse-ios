@@ -1,0 +1,141 @@
+/*
+  Localizable.strings
+  Marcopolo
+
+  Created by Ky on 2019/9/17.
+  Copyright © 2019 marcopolo. All rights reserved.
+*/
+
+"app_name" = "BefiSDK";
+
+"confirm" = "確認";
+"cancel" = "取消";
+"copy" = "複製";
+"share" = "分享";
+"pending" = "轉賬中";
+"success" = "成功";
+"failed" = "失敗";
+"network_failed" = "網絡連結失敗";
+
+"main_tab_assets" = "錢包";
+"main_tab_finds" = "DApp";
+"main_tab_mine" = "我的";
+"assert_web2_third" = "繼續使用";
+"assert_web2_email" = "郵箱";
+"web2_use_email" = "繼續使用郵箱";
+"web2_use_web3" = "使用Web3.0";
+"asserts_host_no_create" = "創建錢包";
+"asserts_host_no_create_tip" = "創建一個全新的錢包";
+"asserts_host_no_import" = "導入錢包";
+"asserts_import" = "導入";
+"asserts_host_no_import_tip" = "導入已有助記詞或私鑰";
+"asserts_wallet_name" = "錢包名稱";
+"asserts_pin_check" = "驗證PIN";
+"asserts_pin_tip" = "請輸入6位PIN";
+"asserts_wallet_name_tip1" = "請輸入正確的名稱";
+"assets_wallet_import_private" = "請輸入正確的助記詞或私鑰";
+"assets_wallet_mnemonic_private" = "助記詞或者私鑰";
+"asserts_pin_match" = "兩次PIN不一致";
+"asserts_wallet_create" = "創建";
+"asserts_wallet_mnemonic" = "助記詞";
+"assets_host_mywallet" = "錢包列表";
+"asserts_wallet_add" = "添加錢包";
+"asserts_receive" = "收款";
+"asserts_receive_tip" = "該地址僅支持 %@ 資產，請勿轉入其他公鏈資產";
+"assets_receipt_scan" = "掃描二維碼,轉入 %@";
+"common_already_copy" = "已復製到剪切板";
+"asserts_amount" = "數量";
+"asserts_fee" = "礦工費用";
+"asserts_transfer" = "轉賬";
+"asserts_to" = "收款地址";
+"asserts_from" = "付款地址";
+"asserts_contract" = "合約地址";
+"asserts_hash" = "交易哈希";
+"no_data" = "暫無數據";
+"asserts_view" = "查看詳情";
+"asserts_address_tip" = "請輸入收款地址";
+"mine_set" = "使用設置";
+"mine_export" = "導出所有私鑰";
+"asserts_wallet_modify" = "修改錢包名稱";
+"asserts_wallet_privatekey" = "查看私鑰";
+"asserts_wallet_delete" = "刪除錢包";
+"asserts_pay_detail" = "支付詳情";
+"asserts_chain_manage" = "錢包主鏈管理";
+"asserts_wallet_manage" = "錢包管理";
+"asserts_hide" = "隱藏";
+"mine_language" = "語言";
+"mine_price" = "貨幣";
+"mine_unit" = "單位";
+"asserts_add_chain_tip" = "請添加 %@ 主鏈";
+"asserts_available" = "可用餘額";
+"asserts_fastest" = "極快";
+"asserts_fast" = "快速";
+"asserts_general" = "一般";
+"asserts_advanced" = "高級";
+"asserts_amount_tip" = "請輸入轉賬數量";
+"Search" = "搜索";
+"asserts_add_success" = "添加成功";
+"asserts_add_failed" = "添加失敗";
+"asserts_already_exist" = "錢包已存在";
+"asserts_wallet_password" = "錢包密碼";
+"asserts_wallet_check" = "驗證錢包密碼";
+"asserts_wallet_password_tip1" = "最少8位";
+"asserts_wallet_password_tip2" = "至少 使用1 個字符、1 個數字、1 個符號";
+"asserts_host_restore" = "恢復錢包";
+"asserts_wallet_name_tip2" = "請輸入8-16位密碼，並且至少包含1個字母，1個數字，1個符號";
+"asserts_wallet_name_match" = "兩次錢包密碼不一致";
+"asserts_wallet_create_failed" = "創建錢包失敗";
+"asserts_wallet_import_failed" = "恢復錢包失敗";
+"asserts_email_verify" = "郵箱驗證";
+"asserts_graph_verify" = "圖形驗證碼";
+"asserts_graph_verify_error" = "圖形驗證碼錯誤";
+"asserts_email_verify_code" = "郵箱驗證碼";
+"asserts_email_verify_code_error" = "郵箱驗證碼錯誤";
+"asserts_fee_tip" = "獲取礦工費失敗";
+
+
+
+"asserts_limit" = "Gas Limit";
+"dialog_input_password" = "输入支付密码";
+"dialog_pay_password" = "支付密码";
+"dialog_confirm_pay" = "确认付款";
+
+"scan_pay_tip" = "将条码放入框内，即可自动扫描";
+"scan_flash_open" = "轻点照明";
+"scan_flash_close" = "轻点关闭";
+
+"assets_create_creating" = "钱包创建中";
+"assets_create_success" = "创建成功";
+"assets_create_backup" = "备份";
+
+"assets_backup_mnemonic" = "备份钱包助记词";
+"assets_backup_mnemonic_tip" = "切勿截屏，确保周围无摄像头、无人！";
+"assets_backup_mnemonic_show" = "点击显示助记词";
+"assets_backup_mnemonic_one" = "请使用纸和笔准确抄写助记词，并安全保管";
+"assets_backup_mnemonic_two" = "如果手机丢失、支付密码忘记，可以通过助记词重新恢复";
+"assets_backup_mnemonic_three" = "切勿截屏存储、不复制、不进行网络传输助记词或私钥，这些行为有可能被第三方恶意软件盗取";
+"assets_backup_mnemonic_four" = "泄露助记词将会导致资产丢失";
+
+"assets_vertify_mnemonic" = "验证钱包助记词";
+"assets_vertify_mnemonic_tip" = "为了确保您抄写的助记词正确无误，请按正确顺序点击助记词！";
+"assets_vertify_mnemonic_error" = "助记词选择有误，请检查备份重新选择";
+
+"assets_host_password_error" = "密码输入错误";
+
+"assets_payment_slow" = "慢";
+"assets_payment_fast" = "快";
+
+"mine_currency_rmb" = "CNY(¥)";
+"mine_currency_my" = "USD($)";
+"mine_currency_hy" = "KRW(₩)";
+
+"scan_transfer_title" = "扫一扫";
+
+"assets_inpput_again" = "重新输入";
+"assets_paypwd_error" = "支付密码错误，请重新输入";
+
+
+"dialog_confirm_dapp_tip" = "此为第三方应用，务必确认签名信息，保障资金安全";
+"dialog_confirm_dapp_gas" = "选择手续费：";
+"dialog_confirm_dapp_type" = "交易类型";
+"dialog_confirm_dapp_sign" = "签名内容";

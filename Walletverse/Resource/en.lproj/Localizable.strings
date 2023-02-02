@@ -1,0 +1,150 @@
+/*
+  Localizable.strings
+  Marcopolo
+
+  Created by Ky on 2019/9/17.
+  Copyright © 2019 marcopolo. All rights reserved.
+*/
+
+"app_name" = "BefiSDK";
+
+"confirm" = "Confirm";
+"cancel" = "Cancel";
+"copy" = "Copy";
+"share" = "Share";
+"pending" = "Pending";
+"success" = "Success";
+"failed" = "Failed";
+"network_failed" = "Network link failed";
+
+
+"main_tab_assets" = "Wallet";
+"main_tab_finds" = "DApp";
+"main_tab_mine" = "Me";
+"assert_web2_third" = "Continue with";
+"assert_web2_email" = "Email";
+"web2_use_email" = "Continue with Email";
+"web2_use_web3" = "Use Web3.0";
+"asserts_host_no_create" = "Create Wallet";
+"asserts_host_no_create_tip" = "Create a new wallet";
+"asserts_host_no_import" = "Import wallet";
+"asserts_import" = "Import";
+"asserts_host_no_import_tip" = "Import existing mnemonic or private key";
+"asserts_wallet_name" = "Wallet Name";
+"asserts_pin_check" = "Check PIN";
+"asserts_pin_tip" = "Please enter a 6-digit pin";
+"asserts_wallet_name_tip1" = "Please enter the correct name";
+"assets_wallet_import_private" = "Please enter the Mnemonic or Private Key";
+"assets_wallet_mnemonic_private" = "Mnemonic or Private Key";
+"asserts_pin_match" = "Two PINs are not consistent";
+"asserts_wallet_create" = "Create";
+"asserts_wallet_mnemonic" = "Mnemonic";
+"assets_host_mywallet" = "Wallet list";
+"asserts_wallet_add" = "Add wallet";
+"asserts_receive" = "Receive";
+"asserts_receive_tip" = "This address only supports %@ assets, please do not transfer assets from other public chains";
+"assets_receipt_scan" = "Scan QR code to transfer %@";
+"common_already_copy" = "Copied to clipboard";
+"asserts_amount" = "Amount";
+"asserts_fee" = "Gas Fee";
+"asserts_transfer" = "Transfer";
+"asserts_to" = "To";
+"asserts_from" = "From";
+"asserts_contract" = "Contract Address";
+"asserts_hash" = "Hash";
+"no_data" = "No Data";
+"asserts_view" = "View details";
+"asserts_address_tip" = "Input the address of receiver";
+"mine_set" = "Settings";
+"mine_export" = "Export all private keys";
+"asserts_wallet_modify" = "Modify wallet name";
+"asserts_wallet_privatekey" = "Private Key";
+"asserts_wallet_delete" = "Delete wallet";
+"asserts_pay_detail" = "Payment Details";
+"asserts_chain_manage" = "Wallet Chain Management";
+"asserts_wallet_manage" = "Wallet Management";
+"asserts_hide" = "Hide";
+"mine_language" = "Languages";
+"mine_price" = "Currency";
+"mine_unit" = "Unit";
+"asserts_add_chain_tip" = "Please add %@ main chain";
+"asserts_available" = "Available";
+"asserts_fastest" = "Fastest";
+"asserts_fast" = "Fast";
+"asserts_general" = "General";
+"asserts_advanced" = "Advanced";
+"asserts_amount_tip" = "Please enter the transfer amount";
+"Search" = "Search";
+"asserts_add_success" = "Added Successfully";
+"asserts_add_failed" = "Added Failed";
+"asserts_already_exist" = "Already exist";
+"asserts_wallet_password" = "Wallet Password";
+"asserts_wallet_password_tip1" = "At least 8 characters";
+"asserts_wallet_password_tip2" = "At least 1 character, 1 digit, 1 symbol";
+"asserts_wallet_check" = "Check Wallet Password";
+"asserts_host_restore" = "Restore Wallet";
+"asserts_wallet_name_tip2" = "Please enter 8-16 digit password with at least 1 character, 1 numeric character, and 1 special character";
+"asserts_wallet_name_match" = "Passwords do not match";
+"asserts_wallet_create_failed" = "Failed to create wallet";
+"asserts_wallet_import_failed" = "Failed to restore wallet";
+"asserts_email_verify" = "Email Verification";
+"asserts_graph_verify" = "Graphics Verification";
+"asserts_graph_verify_error" = "Graphics Verification Error";
+"asserts_email_verify_code" = "Email Verification Code";
+"asserts_email_verify_code_error" = "Email Verification Code Error";
+"asserts_fee_tip" = "Get gas fee failed";
+
+
+
+"asserts_limit" = "Gas Limit";
+
+"asserts_email_verify" = "Email Verification";
+"asserts_graph_verify" = "Graphics Verification";
+
+"asserts_email_verify_error" = "Email Verification Code Error";
+
+
+"dialog_input_password" = "Enter Payment Password";
+"dialog_pay_password" = "Payment Password";
+"dialog_confirm_pay" = "Transfer";
+
+"scan_pay_tip" = "Put the bar code into the box, the scan will automatically start";
+"scan_flash_open" = "Click for flash light";
+"scan_flash_close" = "Click to close";
+
+"assets_create_creating" = "Creating";
+"assets_create_success" = "Creation Successful";
+"assets_create_backup" = "Backup";
+
+"assets_backup_mnemonic" = "Back Up the Mnemonic";
+"assets_backup_mnemonic_tip" = "Do not take a screenshot. Make sure there is no camera or people be side you! ";
+"assets_backup_mnemonic_show" = "Click to display mnemonic";
+"assets_backup_mnemonic_one" = "Please write down the mnemonic on paper and keep it secure.";
+"assets_backup_mnemonic_two" = "If your phone is lost or the payent password is forgotten, please restore with mnemonic";
+"assets_backup_mnemonic_three" = "Do not take screenshots，copy or transfer private key and mnemonic through internet. These behaviour may cause account stolen by third party malware";
+"assets_backup_mnemonic_four" = "Leaking mnemonic will result in asset loss";
+
+"assets_vertify_mnemonic" = "Verify the Wallet Mnemonic";
+"assets_vertify_mnemonic_tip" = "To make sure your copy of the mnemonic is correct, please click on the mnemonic in the correct order!";
+"assets_vertify_mnemonic_error" = "Mnemonic is selected incorrectly, please check the backup and select again";
+
+
+"assets_host_password_error" = "Incorrect Password";
+
+"assets_payment_slow" = "Low";
+"assets_payment_fast" = "Quick";
+
+"mine_currency_rmb" = "CNY(¥)";
+"mine_currency_my" = "USD($)";
+"mine_currency_hy" = "KRW(₩)";
+
+"scan_transfer_title" = "Scan Code";
+
+"assets_inpput_again" = "Re-input";
+"assets_paypwd_error" = "Payment password error, please re-enter";
+
+
+"dialog_confirm_dapp_tip" = "This is a third-party application. Please confirm the signature information to ensure the security of funds.";
+"dialog_confirm_dapp_gas" = "Selection fee：";
+"dialog_confirm_dapp_type" = "Transaction type";
+"dialog_confirm_dapp_sign" = "Signature content";

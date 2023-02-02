@@ -1,0 +1,149 @@
+/* 
+  Localizable.strings
+  Marcopolo
+
+  Created by Ky on 2019/9/17.
+  Copyright © 2019 marcopolo. All rights reserved.
+*/
+
+"app_name" = "BefiSDK";
+
+"confirm" = "확인";
+"cancel" = "취소";
+"copy" = "복사";
+"share" = "공유";
+"pending" = "전송 중";
+"success" = "성공";
+"failed" = "실패";
+"network_failed" = "네트워크 링크 실패";
+
+"main_tab_assets" = "지갑";
+"main_tab_finds" = "DApp";
+"main_tab_mine" = "프로필";
+"assert_web2_third" = "계속하다";
+"assert_web2_email" = "이메일";
+"web2_use_email" = "이메일로 계속하기";
+"web2_use_web3" = "웹3.0 사용하기";
+"asserts_host_no_create" = "지갑 생성";
+"asserts_host_no_create_tip" = "새 지갑 생성하기";
+"asserts_host_no_import" = "지갑 가져오기";
+"asserts_import" = "가져오기";
+"asserts_host_no_import_tip" = "니모닉코드 혹은 프라이빗 키 가져오기";
+"asserts_wallet_name" = "지갑 이름";
+"asserts_pin_check" = "비밀번호 확인";
+"asserts_pin_tip" = "6자리 비밀번호를 입력하세요";
+"asserts_wallet_name_tip1" = "정확한 명칭을 입력하세요";
+"assets_wallet_import_private" = "올바른 니모닉 또는 개인 키를 입력하십시오";
+"assets_wallet_mnemonic_private" = "니모닉코드 혹은 프라이빗 키";
+"asserts_pin_match" = "두 비밀번호가 일치하지 않습니다";
+"asserts_wallet_create" = "생성";
+"asserts_wallet_mnemonic" = "니모닉 코드";
+"assets_host_mywallet" = "지갑 목록";
+"asserts_wallet_add" = "지갑 추가";
+"asserts_receive" = "받기";
+"asserts_receive_tip" = "T이 주소는 %@ 자산만 지원하므로 다른 퍼블릭 체인에서 자산을 전송하지 마세요";
+"assets_receipt_scan" = "QR 코드를 스캔하거나 지갑 주소를 복사하여 %@ 전송하세요";
+"common_already_copy" = "클립보드에 복사";
+"asserts_amount" = "수량";
+"asserts_fee" = "가스비";
+"asserts_transfer" = "전송";
+"asserts_to" = "입금 주소";
+"asserts_from" = "출금 주소";
+"asserts_contract" = "컨트랙트 주소";
+"asserts_hash" = "해쉬";
+"no_data" = "데이터 없음";
+"asserts_view" = "세부 정보 보기";
+"asserts_address_tip" = "입금 주소를 입력하세요";
+"mine_set" = "설정";
+"mine_export" = "모든 개인 키 내보내기";
+"asserts_wallet_modify" = "지갑 이름 수정하기";
+"asserts_wallet_privatekey" = "개인 키 보기";
+"asserts_wallet_delete" = "지갑 삭제";
+"asserts_pay_detail" = "결제 내역";
+"asserts_chain_manage" = "지갑 메인 체인 관리";
+"asserts_wallet_manage" = "지갑 관리";
+"asserts_hide" = "숨기기";
+"mine_language" = "언어";
+"mine_price" = "통화";
+"mine_unit" = "단원";
+"asserts_add_chain_tip" = "%@ 메인 체인을 추가하십시오";
+"asserts_available" = "사용 가능한 잔액";
+"asserts_fastest" = "가장 빠르게";
+"asserts_fast" = "빠르게";
+"asserts_general" = "보통";
+"asserts_advanced" = "고급";
+"asserts_amount_tip" = "전송할 금액을 입력하세요";
+"Search" = "검색";
+"asserts_add_success" = "성공적으로 추가되었습니다";
+"asserts_add_failed" = "추가 실패";
+"asserts_already_exist" = "이미 존재하는 지갑";
+"asserts_wallet_password" = "지갑 비밀번호";
+"asserts_wallet_password_tip1" = "최소 8자";
+"asserts_wallet_password_tip2" = "최소 하나의 알파벳, 하나의 숫자, 하나의 특수문자 포함";
+"asserts_wallet_check" = "지갑 비밀번호 확인하기";
+"asserts_host_restore" = "지갑 복구";
+"asserts_wallet_name_tip2" = "8-16자리 비밀번호를 입력해 주세요. 알파벳, 숫자, 특수문자가 모두 포함되어야 합니다";
+"asserts_wallet_name_match" = "비밀번호가 일치하지 않습니다";
+"asserts_wallet_create_failed" = "지갑 생성 실패";
+"asserts_wallet_import_failed" = "지갑 복원 실패";
+"asserts_email_verify" = "이메일 인증";
+"asserts_graph_verify" = "도형 인증번호";
+"asserts_graph_verify_error" = "도형 인증번호 실수";
+"asserts_email_verify_code" = "이메일 인증코드";
+"asserts_email_verify_code_error" = "이메일 인증코드 실수";
+"asserts_fee_tip" = "가스 요금 획득 실패";
+
+
+
+"asserts_limit" = "Gas Limit";
+
+"asserts_email_verify" = "이메일 인증";
+"asserts_graph_verify" = "도형 인증번호";
+
+"asserts_email_verify_error" = "이메일 인증코드 실수";
+
+"dialog_input_password" = "결제 비밀번호 입력";
+"dialog_pay_password" = "결제 비밀번호";
+"dialog_confirm_pay" = "전송";
+
+"scan_pay_tip" = "바코드를 네모칸에 넣으면 자동 스캔";
+"scan_flash_open" = "클릭하여 조명";
+"scan_flash_close" = "클릭하여 끄기";
+
+"assets_create_creating" = "지갑 생성중";
+"assets_create_success" = "생성 성공";
+"assets_create_backup" = "지금 백업";
+
+"assets_backup_mnemonic" = "备지갑 니모닉 백업";
+"assets_backup_mnemonic_tip" = "스크린 샷을 하지 말고 주변에 카메라나 사람이 있는지 확인하십시오！";
+"assets_backup_mnemonic_show" = "클릭하고 니모닉 표시";
+"assets_backup_mnemonic_one" = "종이와 팬으로 니모닉을 정확하고 기록하고 안전하게 보관하십시오";
+"assets_backup_mnemonic_two" = "휴대 전화가 분실하고 결제 비밀번호를 잃어버린 경우 니모니으로 복구할 수 있습니다.";
+"assets_backup_mnemonic_three" = "스크린샷, 복사, 또는 네트워크로 니모닉이나 개인키를 전송하지 마세요, 이런 행쉬는 타사에게 도난 될 수 있습니다.";
+"assets_backup_mnemonic_four" = "니모닉이 누출되면 자산이 손실할 수 있습니다.";
+
+"assets_vertify_mnemonic" = "지갑 니모닉 확인";
+"assets_vertify_mnemonic_tip" = "적어놓은 니모닉이 올바른지 확인하기 위하여 올바른 순서로 니모닉을 클릭하세요！";
+"assets_vertify_mnemonic_error" = "니모닉 선택이 잘못되었습니다. 백업을 확인하고 다시 선택하십시오.";
+
+
+"assets_host_password_error" = "비밀번호 입력 오류";
+
+"assets_payment_slow" = "느린";
+"assets_payment_fast" = "빠른";
+
+"mine_currency_rmb" = "CNY(¥)";
+"mine_currency_my" = "USD($)";
+"mine_currency_hy" = "KRW(₩)";
+
+"scan_transfer_title" = "일소하다";
+
+"assets_inpput_again" = "다시 입력";
+"assets_paypwd_error" = "비밀번호 오류 를 다시 입력하십시오";
+
+
+"dialog_confirm_dapp_tip" = "이것 은 제3자 응용 이 므 로 반드시 서명 정 보 를 확인 하고 자금 안전 을 확보 해 야 한다.";
+"dialog_confirm_dapp_gas" = "선택 수수료：";
+"dialog_confirm_dapp_type" = "거래 유형";
+"dialog_confirm_dapp_sign" = "서명 내용";
+
