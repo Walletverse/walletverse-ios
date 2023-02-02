@@ -3,6 +3,8 @@
 > [Walletverse 项目地址](https://github.com/Walletverse/walletverse-ios)
 >可下载demo查看具体接入细节
 >
+> [Walletverse framework 地址](https://github.com/Walletverse/walletverse-ios/tree/master/Walletverse/IosSDK)
+>
 > [Walletverse ipa包](https://github.com/Walletverse/walletverse-ios/tree/master/demo/Walletverse_iOS_Test.ipa) 下载地址
 
 ### 1、 集成
