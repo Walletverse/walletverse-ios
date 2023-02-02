@@ -11,18 +11,10 @@
 
 [comment]: <> (下载[ipa]&#40;http://walletverse.tech/&#41;包，并添加到工程中)
 
-##### 1.1 将 SDK 项目 befi_sdk_ios2 目录中的如下文件夹添加到开发项目中。例如：./Project/Vender/下
+##### 1.1 将 SDK 项目 walletverse-ios 目录中的如下文件夹添加到开发项目中。
 
 ```swift
-befi_sdk_ios2/Files
-befi_sdk_ios2/Database
-befi_sdk_ios2/JSCore
-befi_sdk_ios2/Config
-befi_sdk_ios2/Webview
-befi_sdk_ios2/Server
-befi_sdk_ios2/Utils
-befi_sdk_ios2/Chain
-befi_sdk_ios2/Wallet
+IosSDK
 ```
 
 ##### 1.2 开发项目 Podfile 文件中添加以下依赖库。
