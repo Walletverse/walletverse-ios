@@ -10,6 +10,7 @@
 		6491C242D2A48921EDBD2CAF /* Pods_Walletverse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF894F856C17541264EF044 /* Pods_Walletverse.framework */; };
 		F10555D52373F1E2000CEBB5 /* CustomAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F10555D42373F1E2000CEBB5 /* CustomAlertView.swift */; };
 		F108A38F28EFC77B0025FC47 /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F108A38E28EFC77B0025FC47 /* InitViewController.swift */; };
+		F127602F298B5D0800F5871E /* SDK_M_IOS.md in Resources */ = {isa = PBXBuildFile; fileRef = F127602E298B5D0800F5871E /* SDK_M_IOS.md */; };
 		F147B051233090A300B1F290 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147B050233090A300B1F290 /* BaseViewController.swift */; };
 		F147B053233090F700B1F290 /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147B052233090F700B1F290 /* BaseWebViewController.swift */; };
 		F147B0552330910C00B1F290 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F147B0542330910C00B1F290 /* BaseTabBarController.swift */; };
@@ -113,6 +114,7 @@
 		ACF894F856C17541264EF044 /* Pods_Walletverse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Walletverse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F10555D42373F1E2000CEBB5 /* CustomAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertView.swift; sourceTree = "<group>"; };
 		F108A38E28EFC77B0025FC47 /* InitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitViewController.swift; sourceTree = "<group>"; };
+		F127602E298B5D0800F5871E /* SDK_M_IOS.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = SDK_M_IOS.md; sourceTree = "<group>"; };
 		F130283B24F39CE600F13A8A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F147B04F23308CF800B1F290 /* SwiftOC-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SwiftOC-Header.h"; sourceTree = "<group>"; };
 		F147B050233090A300B1F290 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -461,6 +463,7 @@
 		F1B68809233080F2004165BA = {
 			isa = PBXGroup;
 			children = (
+				F127602E298B5D0800F5871E /* SDK_M_IOS.md */,
 				F1B6886E233082F6004165BA /* Modules */,
 				F1B68814233080F2004165BA /* Walletverse */,
 				F1B68813233080F2004165BA /* Products */,
@@ -676,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F14EF8F22906AA6C00BC15C9 /* GoogleService-Info.plist in Resources */,
+				F127602F298B5D0800F5871E /* SDK_M_IOS.md in Resources */,
 				F1B68820233080F2004165BA /* Assets.xcassets in Resources */,
 				F147B0FC2330C6BB00B1F290 /* Localizable.strings in Resources */,
 				F1B0A20B2937517C0088D22B /* resource.bundle in Resources */,
