@@ -92,7 +92,7 @@ class VertifyMnemonicViewController: BaseViewController {
             if let privateKey = returnData {
                 let addressParams = JSCoreParams()
                     .put(key: "chainId", value: "0x1")?
-                    .put(key: "mnemonic", value: privateKey) ?? JSCoreParams()
+                    .put(key: "privateKey", value: privateKey) ?? JSCoreParams()
                 Walletverse.getAddress(params: addressParams) { (returnData, error) in
                     
                     if let address = returnData {

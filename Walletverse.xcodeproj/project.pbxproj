@@ -93,13 +93,13 @@
 		F1AFB0E528F444BF00FD4994 /* ReciptCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AFB0E428F444BF00FD4994 /* ReciptCreateView.swift */; };
 		F1AFB0E728F44F9900FD4994 /* FeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AFB0E628F44F9900FD4994 /* FeeViewController.swift */; };
 		F1AFB0E928F47B6500FD4994 /* TransferScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AFB0E828F47B6500FD4994 /* TransferScanViewController.swift */; };
-		F1B0A20B2937517C0088D22B /* resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F1B0A2092937517C0088D22B /* resource.bundle */; };
-		F1B0A20C2937517C0088D22B /* WalletVerseCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B0A20A2937517C0088D22B /* WalletVerseCore.xcframework */; };
 		F1B68816233080F2004165BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B68815233080F2004165BA /* AppDelegate.swift */; };
 		F1B6881E233080F2004165BA /* Walletverse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F1B6881C233080F2004165BA /* Walletverse.xcdatamodeld */; };
 		F1B68820233080F2004165BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B6881F233080F2004165BA /* Assets.xcassets */; };
 		F1B68898233089B2004165BA /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B68897233089B2004165BA /* BaseNavigationController.swift */; };
 		F1DC55A62908CB160036CB62 /* SearchTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DC55A52908CB160036CB62 /* SearchTokenViewController.swift */; };
+		F1E1CB0D299F8053000D89B5 /* WalletVerseCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E1CB0B299F8053000D89B5 /* WalletVerseCore.xcframework */; };
+		F1E1CB0E299F8053000D89B5 /* resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F1E1CB0C299F8053000D89B5 /* resource.bundle */; };
 		F1F95B4F243335D400903B0F /* InputNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F95B4E243335D400903B0F /* InputNameView.swift */; };
 		F1FF1E8728F0F23900CE3005 /* CreateWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF1E8628F0F23900CE3005 /* CreateWalletViewController.swift */; };
 		F1FF1E8928F1018800CE3005 /* CreateMnemonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FF1E8828F1018800CE3005 /* CreateMnemonicViewController.swift */; };
@@ -201,8 +201,6 @@
 		F1AFB0E428F444BF00FD4994 /* ReciptCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReciptCreateView.swift; sourceTree = "<group>"; };
 		F1AFB0E628F44F9900FD4994 /* FeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeViewController.swift; sourceTree = "<group>"; };
 		F1AFB0E828F47B6500FD4994 /* TransferScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferScanViewController.swift; sourceTree = "<group>"; };
-		F1B0A2092937517C0088D22B /* resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = resource.bundle; sourceTree = "<group>"; };
-		F1B0A20A2937517C0088D22B /* WalletVerseCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = WalletVerseCore.xcframework; sourceTree = "<group>"; };
 		F1B68812233080F2004165BA /* True.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = True.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B68815233080F2004165BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1B6881D233080F2004165BA /* Marcopolo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Marcopolo.xcdatamodel; sourceTree = "<group>"; };
@@ -211,6 +209,8 @@
 		F1B6886F2330833A004165BA /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		F1B68897233089B2004165BA /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		F1DC55A52908CB160036CB62 /* SearchTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTokenViewController.swift; sourceTree = "<group>"; };
+		F1E1CB0B299F8053000D89B5 /* WalletVerseCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = WalletVerseCore.xcframework; sourceTree = "<group>"; };
+		F1E1CB0C299F8053000D89B5 /* resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = resource.bundle; sourceTree = "<group>"; };
 		F1F95B4E243335D400903B0F /* InputNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNameView.swift; sourceTree = "<group>"; };
 		F1FF1E8628F0F23900CE3005 /* CreateWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWalletViewController.swift; sourceTree = "<group>"; };
 		F1FF1E8828F1018800CE3005 /* CreateMnemonicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateMnemonicViewController.swift; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6491C242D2A48921EDBD2CAF /* Pods_Walletverse.framework in Frameworks */,
-				F1B0A20C2937517C0088D22B /* WalletVerseCore.xcframework in Frameworks */,
+				F1E1CB0D299F8053000D89B5 /* WalletVerseCore.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,15 +451,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F1B0A2082937517C0088D22B /* BefiSDK */ = {
-			isa = PBXGroup;
-			children = (
-				F1B0A2092937517C0088D22B /* resource.bundle */,
-				F1B0A20A2937517C0088D22B /* WalletVerseCore.xcframework */,
-			);
-			path = BefiSDK;
-			sourceTree = "<group>";
-		};
 		F1B68809233080F2004165BA = {
 			isa = PBXGroup;
 			children = (
@@ -483,7 +474,7 @@
 		F1B68814233080F2004165BA /* Walletverse */ = {
 			isa = PBXGroup;
 			children = (
-				F1B0A2082937517C0088D22B /* BefiSDK */,
+				F1E1CB0A299F8053000D89B5 /* IosSDK */,
 				F14EF8F12906AA6C00BC15C9 /* GoogleService-Info.plist */,
 				F15547ED2387859C004C025A /* Walletverse.entitlements */,
 				F1B68867233082C7004165BA /* Class */,
@@ -600,6 +591,15 @@
 			path = BaseController;
 			sourceTree = "<group>";
 		};
+		F1E1CB0A299F8053000D89B5 /* IosSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F1E1CB0B299F8053000D89B5 /* WalletVerseCore.xcframework */,
+				F1E1CB0C299F8053000D89B5 /* resource.bundle */,
+			);
+			path = IosSDK;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -680,9 +680,9 @@
 			files = (
 				F1276031298B622700F5871E /* README.md in Resources */,
 				F14EF8F22906AA6C00BC15C9 /* GoogleService-Info.plist in Resources */,
+				F1E1CB0E299F8053000D89B5 /* resource.bundle in Resources */,
 				F1B68820233080F2004165BA /* Assets.xcassets in Resources */,
 				F147B0FC2330C6BB00B1F290 /* Localizable.strings in Resources */,
-				F1B0A20B2937517C0088D22B /* resource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
