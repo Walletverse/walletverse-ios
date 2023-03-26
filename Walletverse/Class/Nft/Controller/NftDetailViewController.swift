@@ -152,7 +152,7 @@ class NftDetailViewController: BaseViewController {
     }
     
     @objc func transfreDataBtnClick() {
-        let nftTransferDataParams = NftTransferDataParams(chainId: "0x1", tokenId: nftModel?.tokenId ?? "", contractAddress: "0x3A2C64e82f31E70aaf02849bc1e0952A610b95F3", from: "0xF42Dc31cef8462eC1C4831FAF39F8dd2B0C5a0f8", to: "0xdaA36E030c987e1B0F950703BeF628b46088bD39")
+        let nftTransferDataParams = NftTransferDataParams(chainId: "0x58f8", tokenId: nftModel?.tokenId ?? "", contractAddress: "0x8b6d309d2a68a4bdd6ead9f12bc44bc4baa0f8c8", from: "0x97bc095c706Ab7b300B88fD6255CaD557c1a5b32", to: "0xdaA36E030c987e1B0F950703BeF628b46088bD39")
         Walletverse.getNftTransferData(params: nftTransferDataParams) { (result) in
             if let message = result {
                 let alertV = CustomAlertView.init(title: LocalString("nft_transfer_data"), message: message, preferredStyle: UIAlertController.Style.alert)
@@ -170,7 +170,7 @@ class NftDetailViewController: BaseViewController {
     }
     
     @objc func tokenUriBtnClick() {
-        let nftTokenURIParams = NftTokenURIParams(chainId: "0x1", tokenId: nftModel?.tokenId ?? "", contractAddress: "0x3A2C64e82f31E70aaf02849bc1e0952A610b95F3")
+        let nftTokenURIParams = NftTokenURIParams(chainId: "0x58f8", tokenId: nftModel?.tokenId ?? "", contractAddress: "0x8b6d309d2a68a4bdd6ead9f12bc44bc4baa0f8c8")
         Walletverse.getNftTokenURI(params: nftTokenURIParams) { (result) in
             if let message = result {
                 let alertV = CustomAlertView.init(title: LocalString("nft_token_uri"), message: message, preferredStyle: UIAlertController.Style.alert)

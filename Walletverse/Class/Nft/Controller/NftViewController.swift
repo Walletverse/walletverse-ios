@@ -68,7 +68,7 @@ class NftViewController: BaseViewController {
     }
     
     func initNftList() {
-        let nftItemsParams = NftItemsParams(chainId: "0x1", address: "0xF42Dc31cef8462eC1C4831FAF39F8dd2B0C5a0f8", contractAddress: "0x3A2C64e82f31E70aaf02849bc1e0952A610b95F3")
+        let nftItemsParams = NftItemsParams(chainId: "0x58f8", address: "0x97bc095c706Ab7b300B88fD6255CaD557c1a5b32", contractAddress: "0x8b6d309d2a68a4bdd6ead9f12bc44bc4baa0f8c8")
         Walletverse.getNftItems(params: nftItemsParams) { (result) in
             if let nftArray = result {
                 self.nftList = nftArray
