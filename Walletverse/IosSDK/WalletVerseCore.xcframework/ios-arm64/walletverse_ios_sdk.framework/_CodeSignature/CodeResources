@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		NADAgKFykAqE6ChrslEgUA7gdcM=
+		jrUYLYqnaez0orlvm3tNFKtfKEQ=
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		xzk3aRoLDoYiKAHF2BUO7xlMmnA=
+		NDw5O/T2iYENibKdd/PSUagdxFw=
 		</data>
 		<key>resource.bundle/bundle.js</key>
 		<data>
@@ -209,11 +209,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NADAgKFykAqE6ChrslEgUA7gdcM=
+			jrUYLYqnaez0orlvm3tNFKtfKEQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			YqqbGFt3UzJJUs+mGxk9Xasg1LGS3cdHeb0mFjsUKL8=
+			/EjtYmhkhB6Q41zerTnipCg11WXsqPdaFb6ISbQkji8=
 			</data>
 		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -242,11 +242,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xzk3aRoLDoYiKAHF2BUO7xlMmnA=
+			NDw5O/T2iYENibKdd/PSUagdxFw=
 			</data>
 			<key>hash2</key>
 			<data>
-			24U4F9m3IAQtNuaj4TKBvBOnuHIDRzvzNGlIsh2LoL0=
+			uFZ27DMKoKt8IkBPsl2wOCdtS0PCrVhxL6UCs24rb+4=
 			</data>
 		</dict>
 		<key>resource.bundle/bundle.js</key>

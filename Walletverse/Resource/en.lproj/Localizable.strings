@@ -19,6 +19,7 @@
 
 
 "main_tab_assets" = "Wallet";
+"main_tab_nfts" = "NFT";
 "main_tab_finds" = "DApp";
 "main_tab_mine" = "Me";
 "assert_web2_third" = "Continue with";
@@ -148,3 +149,7 @@
 "dialog_confirm_dapp_gas" = "Selection fee：";
 "dialog_confirm_dapp_type" = "Transaction type";
 "dialog_confirm_dapp_sign" = "Signature content";
+
+"nft_transfer_data" = "Transfer Data";
+"nft_token_uri" = "Token URI";
+

@@ -68,6 +68,10 @@
 		F165956D235F1FCF00F4BFC2 /* RefreshUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165956C235F1FCF00F4BFC2 /* RefreshUtil.swift */; };
 		F165956F235F203200F4BFC2 /* EmptyDataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165956E235F203200F4BFC2 /* EmptyDataUtil.swift */; };
 		F1659571235F209F00F4BFC2 /* EmptyDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1659570235F209F00F4BFC2 /* EmptyDataView.swift */; };
+		F18A6B0F29CF0114003C8517 /* NftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A6B0E29CF0114003C8517 /* NftViewController.swift */; };
+		F18A6B1129D06340003C8517 /* NftTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A6B1029D06340003C8517 /* NftTableCell.swift */; };
+		F18A6B1329D063F4003C8517 /* NftDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A6B1229D063F4003C8517 /* NftDetailViewController.swift */; };
+		F18A6B1529D06EA9003C8517 /* NftAttributeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18A6B1429D06EA9003C8517 /* NftAttributeTableCell.swift */; };
 		F1924BBB28EFD9AC00B9F42A /* DevelopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1924BBA28EFD9AC00B9F42A /* DevelopViewController.swift */; };
 		F1924BBD28EFD9C700B9F42A /* Web2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1924BBC28EFD9C700B9F42A /* Web2ViewController.swift */; };
 		F1924BBF28EFD9DD00B9F42A /* Web3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1924BBE28EFD9DD00B9F42A /* Web3ViewController.swift */; };
@@ -176,6 +180,10 @@
 		F165956C235F1FCF00F4BFC2 /* RefreshUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshUtil.swift; sourceTree = "<group>"; };
 		F165956E235F203200F4BFC2 /* EmptyDataUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataUtil.swift; sourceTree = "<group>"; };
 		F1659570235F209F00F4BFC2 /* EmptyDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataView.swift; sourceTree = "<group>"; };
+		F18A6B0E29CF0114003C8517 /* NftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftViewController.swift; sourceTree = "<group>"; };
+		F18A6B1029D06340003C8517 /* NftTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftTableCell.swift; sourceTree = "<group>"; };
+		F18A6B1229D063F4003C8517 /* NftDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftDetailViewController.swift; sourceTree = "<group>"; };
+		F18A6B1429D06EA9003C8517 /* NftAttributeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NftAttributeTableCell.swift; sourceTree = "<group>"; };
 		F1924BBA28EFD9AC00B9F42A /* DevelopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopViewController.swift; sourceTree = "<group>"; };
 		F1924BBC28EFD9C700B9F42A /* Web2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web2ViewController.swift; sourceTree = "<group>"; };
 		F1924BBE28EFD9DD00B9F42A /* Web3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web3ViewController.swift; sourceTree = "<group>"; };
@@ -443,6 +451,41 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F18A6B0A29CF00ED003C8517 /* Nft */ = {
+			isa = PBXGroup;
+			children = (
+				F18A6B0B29CF00ED003C8517 /* Controller */,
+				F18A6B0C29CF00ED003C8517 /* Model */,
+				F18A6B0D29CF00ED003C8517 /* View */,
+			);
+			path = Nft;
+			sourceTree = "<group>";
+		};
+		F18A6B0B29CF00ED003C8517 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F18A6B0E29CF0114003C8517 /* NftViewController.swift */,
+				F18A6B1229D063F4003C8517 /* NftDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F18A6B0C29CF00ED003C8517 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F18A6B0D29CF00ED003C8517 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F18A6B1029D06340003C8517 /* NftTableCell.swift */,
+				F18A6B1429D06EA9003C8517 /* NftAttributeTableCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F1AFB0B928F2A7A000FD4994 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +538,7 @@
 		F1B68867233082C7004165BA /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				F18A6B0A29CF00ED003C8517 /* Nft */,
 				F15ECD7928F2544800E162AC /* Dapp */,
 				F147B0782330AEA900B1F290 /* Assets */,
 				F147B06C2330AEA900B1F290 /* Main */,
@@ -761,6 +805,7 @@
 				F1924BBB28EFD9AC00B9F42A /* DevelopViewController.swift in Sources */,
 				F1AFB0E328F42C7D00FD4994 /* ReceiveViewController.swift in Sources */,
 				F1924BBF28EFD9DD00B9F42A /* Web3ViewController.swift in Sources */,
+				F18A6B1529D06EA9003C8517 /* NftAttributeTableCell.swift in Sources */,
 				F147B053233090F700B1F290 /* BaseWebViewController.swift in Sources */,
 				F147B0572330917D00B1F290 /* CommonDef.swift in Sources */,
 				F1FF1E8928F1018800CE3005 /* CreateMnemonicViewController.swift in Sources */,
@@ -802,10 +847,12 @@
 				F1B68816233080F2004165BA /* AppDelegate.swift in Sources */,
 				F1F95B4F243335D400903B0F /* InputNameView.swift in Sources */,
 				F147B0632330AA5400B1F290 /* CGSize+Utils.swift in Sources */,
+				F18A6B1129D06340003C8517 /* NftTableCell.swift in Sources */,
 				F147B05D2330A8C100B1F290 /* Global.swift in Sources */,
 				F147B0612330AA1700B1F290 /* UIView+Utils.swift in Sources */,
 				F1497E2A235DCA13008ECDE3 /* CommonToastView.swift in Sources */,
 				F1FF1E8D28F107A200CE3005 /* VertifyMnemonicViewController.swift in Sources */,
+				F18A6B1329D063F4003C8517 /* NftDetailViewController.swift in Sources */,
 				F1AFB0DD28F4018A00FD4994 /* WalletManageTableCell.swift in Sources */,
 				F163367628F55604006C9028 /* CommonWebviewController.swift in Sources */,
 				F1AFB0CD28F318B100FD4994 /* EmailVerifyView.swift in Sources */,
@@ -816,6 +863,7 @@
 				F15ECD7228F2523800E162AC /* MainViewController.swift in Sources */,
 				F14EF8F42906AF6A00BC15C9 /* ThirdCollectionCell.swift in Sources */,
 				F1AFB0CB28F2F70D00FD4994 /* AssetsMenuTableCell.swift in Sources */,
+				F18A6B0F29CF0114003C8517 /* NftViewController.swift in Sources */,
 				F163366E28F50A6A006C9028 /* ChainTokenViewController.swift in Sources */,
 				F165956D235F1FCF00F4BFC2 /* RefreshUtil.swift in Sources */,
 				F1571D1B236C134700AFD32B /* ZGScanViewStyle.swift in Sources */,

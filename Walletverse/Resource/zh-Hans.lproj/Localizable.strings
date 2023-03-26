@@ -18,6 +18,7 @@
 "network_failed" = "網絡連結失敗";
 
 "main_tab_assets" = "錢包";
+"main_tab_nfts" = "NFT";
 "main_tab_finds" = "DApp";
 "main_tab_mine" = "我的";
 "assert_web2_third" = "繼續使用";
@@ -139,3 +140,7 @@
 "dialog_confirm_dapp_gas" = "选择手续费：";
 "dialog_confirm_dapp_type" = "交易类型";
 "dialog_confirm_dapp_sign" = "签名内容";
+
+"nft_transfer_data" = "转账数据";
+"nft_token_uri" = "代币 URI";
+

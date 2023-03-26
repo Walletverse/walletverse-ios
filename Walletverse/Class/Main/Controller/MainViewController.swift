@@ -27,6 +27,7 @@ class MainViewController: BaseTabBarController {
             
         }
         addChildViewController(childController: AssetsHostViewController(), title: LocalString("main_tab_assets"), image: UIImage(named: "main_tap_assets_false"), selectedImage: UIImage(named: "main_tap_assets_true"))
+        addChildViewController(childController: NftViewController(), title: LocalString("main_tab_nfts"), image: UIImage(named: "main_tap_find_false"), selectedImage: UIImage(named: "main_tap_find_true"))
         addChildViewController(childController: DappViewController(), title: LocalString("main_tab_finds"), image: UIImage(named: "main_tap_find_false"), selectedImage: UIImage(named: "main_tap_find_true"))
         addChildViewController(childController: MineViewController(), title: LocalString("main_tab_mine"), image: UIImage(named: "main_tap_mine_false"), selectedImage: UIImage(named: "main_tap_mine_true"))
     }

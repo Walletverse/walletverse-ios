@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		YzL5CbCgN3OaMgMiDlPvAGveOe0=
+		PtNXU6vwnNiLBCXA6J9Fwi0zAgI=
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		I+CnPLVWVB/3RQXREdOPZE/5l2A=
+		7w6ufizwaFoBDslGQ1V8e438/NU=
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		xiq8H1swJheONB/fQ0M24TOqsx8=
+		EQJbKuzfpmUoTegWQRR03I/v6IQ=
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZRjQfNGDyikAasHv1+PQn4Lskx8=
+		J9tvZrFlNIzEnxqlmda46TL9S0c=
 		</data>
 		<key>resource.bundle/bundle.js</key>
 		<data>
@@ -225,22 +225,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YzL5CbCgN3OaMgMiDlPvAGveOe0=
+			PtNXU6vwnNiLBCXA6J9Fwi0zAgI=
 			</data>
 			<key>hash2</key>
 			<data>
-			DESWGROKFoT6lATnFuoNcIWZn6fCmZ2onJDgfbYboxE=
+			16/zDP2mySnUI/DUxJytHb282Dfxi+0ozOY+2Mz8fKY=
 			</data>
 		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			I+CnPLVWVB/3RQXREdOPZE/5l2A=
+			7w6ufizwaFoBDslGQ1V8e438/NU=
 			</data>
 			<key>hash2</key>
 			<data>
-			C/KeJf4vMyPfH6Yj5or4UMSD0AL/dv+c1IUW7cxQES0=
+			lpXW5KFegFv7dxPYcqHNSZgXhtO7sbng65+U2m0eFDE=
 			</data>
 		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -269,11 +269,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xiq8H1swJheONB/fQ0M24TOqsx8=
+			EQJbKuzfpmUoTegWQRR03I/v6IQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			VGyA+ZX+aORfoJTF8fGGODMHnGrBvW7Es1GlHKyCGRs=
+			T1NvNc77lxPD1KuRiudUv8sGqzNqSdDMi5JFsUfGqlU=
 			</data>
 		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -302,11 +302,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZRjQfNGDyikAasHv1+PQn4Lskx8=
+			J9tvZrFlNIzEnxqlmda46TL9S0c=
 			</data>
 			<key>hash2</key>
 			<data>
-			iayMIGztUlp5I2oRZHHRC54w/LCU5blI8TfSncV5kq0=
+			veIyUxnr48vsX04mzz38HUS2MO0ANp414WnEPasGEx0=
 			</data>
 		</dict>
 		<key>resource.bundle/bundle.js</key>

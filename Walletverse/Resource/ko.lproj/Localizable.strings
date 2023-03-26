@@ -18,6 +18,7 @@
 "network_failed" = "네트워크 링크 실패";
 
 "main_tab_assets" = "지갑";
+"main_tab_nfts" = "NFT";
 "main_tab_finds" = "DApp";
 "main_tab_mine" = "프로필";
 "assert_web2_third" = "계속하다";
@@ -146,4 +147,7 @@
 "dialog_confirm_dapp_gas" = "선택 수수료：";
 "dialog_confirm_dapp_type" = "거래 유형";
 "dialog_confirm_dapp_sign" = "서명 내용";
+
+"nft_transfer_data" = "데이터 전송";
+"nft_token_uri" = "토큰 우리";
 
