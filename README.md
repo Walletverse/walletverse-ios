@@ -1113,6 +1113,79 @@ Walletverse.validatePassword(value: String) -> Bool
 ```
 
 
+### NFT相关调用
+
+##### 3.61 NFT列表
+
+```swift
+ let nftItemsParams = NftItemsParams(
+    chainId,
+    address, //当前钱包地址
+    contractAddress, //合约地址
+    )
+ Walletverse.getNftItems(params: nftItemsParams) { (result) in
+    // 成功
+    if let nftArray = result {
+        nftArray为对象，nftArray.items为nft列表
+    }
+ }
+
+```
+
+##### 3.62 NFT详情
+
+```swift
+let nftDetailParams = NftDetailParams(
+    chainId,
+    tokenId, //NFT的id
+    contractAddress, //合约地址
+    )
+ Walletverse.getNftDetail(params: nftDetailParams) { (result) in
+    // 成功
+    if let nftArray = result {
+        nftArray为对象，nftArray.items为nft列表
+    }
+ }
+
+```
+
+##### 3.63 NFT转账数据生成
+
+```swift
+ let nftTransferDataParams = NftTransferDataParams(
+    chainId, // 链id
+    tokenId, // nft的id
+    contractAddress, // nft合约地址
+    from, // 转出地址
+    to, // 转入地址
+ )
+ Walletverse.getNftTransferData(params: nftTransferDataParams) { (result) in
+    // 成功
+    if let message = result {
+
+    }
+ }
+
+```
+
+##### 3.63 NFT获取Token URI
+
+```swift
+ let nftTokenURIParams = NftTokenURIParams(
+    chainId, // 链id
+    tokenId, // nft的id
+    contractAddress, // nft合约地址
+ )
+ Walletverse.getNftTokenURI(params: nftTokenURIParams) { (result) in
+    // 成功
+    if let message = result {
+
+    }
+ }
+
+```
+
+
 ### 币转账流程
 
 >完整的转账流程如下：
