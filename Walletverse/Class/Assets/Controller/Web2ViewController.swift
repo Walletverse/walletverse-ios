@@ -201,7 +201,7 @@ class Web2ViewController : BaseViewController, ThirdCollectionCellDelegate {
         return PredicateUtil.vertifyEmail(email)
     }
     
-    func signInWeb2(providerKey: String, providerUid: String, providerId: Channel, auth: String) {
+    func signInWeb2(providerKey: String, providerUid: String, providerId: String, auth: String) {
         if auth.isEmpty {
             CommonToastView.showToastAction(message: LocalString("asserts_email_verify_error"))
             return
@@ -315,7 +315,7 @@ extension Web2ViewController : UITextFieldDelegate {
 
 extension Web2ViewController : EmailVerifyViewDelegate {
     func confirmAction(auth: String) {
-        signInWeb2(providerKey: emailTF.text ?? "", providerUid: emailTF.text ?? "", providerId: Channel.Email, auth: auth)
+        signInWeb2(providerKey: emailTF.text ?? "", providerUid: emailTF.text ?? "", providerId: "sys.email", auth: auth)
     }
 }
 
@@ -358,7 +358,7 @@ extension Web2ViewController : UICollectionViewDelegate,UICollectionViewDataSour
                 guard let userId = result?.userID, let email = result?.profile?.email else {
                     return
                 }
-                self.signInWeb2(providerKey: email, providerUid: email, providerId: Channel.Google, auth: userId)
+                self.signInWeb2(providerKey: email, providerUid: email, providerId: "google.com", auth: userId)
             }
         }
     }

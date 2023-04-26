@@ -887,7 +887,7 @@ Walletverse.install(appId: Constants.APPID, appKey: Constants.APPKEY, userConfig
  let params = FederatedParams(
      providerKey: String, //一般为用户的邮箱，如果没有获取到邮箱，可以使用用户昵称
      providerUid: String, //联合登录平台的用户唯一id
-     providerId: Channel, //enum，SDK提供的联合登录渠道
+     providerId: String, //SDK提供的联合登录渠道
      auth: String         //如果email登录方式，此参数必传，联合登录方式可不传
  )
  Walletverse.generateWidWithWeb2(params: params) { (result) in
@@ -906,7 +906,7 @@ Walletverse.install(appId: Constants.APPID, appKey: Constants.APPKEY, userConfig
  let params = FederatedParams(
     providerKey: String, //一般为用户的邮箱，如果没有获取到邮箱，可以使用用户昵称
     providerUid: String, //联合登录平台的用户唯一id
-    providerId: Channel, //enum，SDK提供的联合登录渠道
+    providerId: String, //SDK提供的联合登录渠道
     auth: String         //如果email登录方式，此参数必传，联合登录方式可不传
  )
  Walletverse.signInWeb2(params: params) { (result) in

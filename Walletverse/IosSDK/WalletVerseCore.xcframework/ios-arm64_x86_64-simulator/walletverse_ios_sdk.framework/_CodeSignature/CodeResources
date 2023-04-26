@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		PtNXU6vwnNiLBCXA6J9Fwi0zAgI=
+		jeL9Yi+upACg4xDsa99FkCsCWI0=
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		7w6ufizwaFoBDslGQ1V8e438/NU=
+		QSGKPtkfxHOfNwNEQ0I3IoqyGZs=
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		EQJbKuzfpmUoTegWQRR03I/v6IQ=
+		t480uS124RNU0E74M4p181HZx0Y=
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		J9tvZrFlNIzEnxqlmda46TL9S0c=
+		fFKhfUPAd7Qy5nxENUPJTV439fc=
 		</data>
 		<key>resource.bundle/bundle.js</key>
 		<data>
@@ -225,22 +225,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PtNXU6vwnNiLBCXA6J9Fwi0zAgI=
+			jeL9Yi+upACg4xDsa99FkCsCWI0=
 			</data>
 			<key>hash2</key>
 			<data>
-			16/zDP2mySnUI/DUxJytHb282Dfxi+0ozOY+2Mz8fKY=
+			DvRH8LR3aCRt5EIWMNCu2QtlXXoooEiUr22amkgKgh8=
 			</data>
 		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7w6ufizwaFoBDslGQ1V8e438/NU=
+			QSGKPtkfxHOfNwNEQ0I3IoqyGZs=
 			</data>
 			<key>hash2</key>
 			<data>
-			lpXW5KFegFv7dxPYcqHNSZgXhtO7sbng65+U2m0eFDE=
+			eeVKMMUfs11rKGMzXugPsTDI+wk9o4r5uQMZ5RMVnkc=
 			</data>
 		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -269,11 +269,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EQJbKuzfpmUoTegWQRR03I/v6IQ=
+			t480uS124RNU0E74M4p181HZx0Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			T1NvNc77lxPD1KuRiudUv8sGqzNqSdDMi5JFsUfGqlU=
+			C5zMtJ7BZJK2hVAkNXXAHjxPVFMTzkXD4KQD3cpr8Vg=
 			</data>
 		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -302,11 +302,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			J9tvZrFlNIzEnxqlmda46TL9S0c=
+			fFKhfUPAd7Qy5nxENUPJTV439fc=
 			</data>
 			<key>hash2</key>
 			<data>
-			veIyUxnr48vsX04mzz38HUS2MO0ANp414WnEPasGEx0=
+			78Y3pFh0HB58AGWoYsMcegCznZ3PrTimPOoiSRk3Mys=
 			</data>
 		</dict>
 		<key>resource.bundle/bundle.js</key>
