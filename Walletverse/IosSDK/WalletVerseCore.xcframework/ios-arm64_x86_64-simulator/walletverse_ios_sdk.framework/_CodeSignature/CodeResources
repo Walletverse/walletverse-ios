@@ -26,7 +26,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Fnv6YJtM7vBPCkEhCSfdOl+1KEI=
+		8bX6GiDkXIv3A6NU3hT/0CSPmBY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		jeL9Yi+upACg4xDsa99FkCsCWI0=
+		GI/HpZQg+nqwBJpft2DO9K0frCg=
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		QSGKPtkfxHOfNwNEQ0I3IoqyGZs=
+		RfIB7+1Gu6XStL0HcD3PKsJ6m9k=
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -119,6 +119,10 @@
 		<key>resource.bundle/inject_map.js</key>
 		<data>
 		n+mrRU99c+gkxp9TH351u3I2WBA=
+		</data>
+		<key>resource.bundle/inject_mapo.js</key>
+		<data>
+		Qe/c7vk6Y3RXbUGPm7PgoP09vLc=
 		</data>
 		<key>resource.bundle/inject_matic.js</key>
 		<data>
@@ -225,22 +229,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			jeL9Yi+upACg4xDsa99FkCsCWI0=
+			GI/HpZQg+nqwBJpft2DO9K0frCg=
 			</data>
 			<key>hash2</key>
 			<data>
-			DvRH8LR3aCRt5EIWMNCu2QtlXXoooEiUr22amkgKgh8=
+			TNm1lEvtUkbNPNtDNVhSxXnmjKuEM/hCqIYv1gXr6U8=
 			</data>
 		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QSGKPtkfxHOfNwNEQ0I3IoqyGZs=
+			RfIB7+1Gu6XStL0HcD3PKsJ6m9k=
 			</data>
 			<key>hash2</key>
 			<data>
-			eeVKMMUfs11rKGMzXugPsTDI+wk9o4r5uQMZ5RMVnkc=
+			G1TX6hNbZcch+NKTawzFK2zz8UWUQk6wasiudHlaSk8=
 			</data>
 		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -461,6 +465,17 @@
 			<key>hash2</key>
 			<data>
 			B6e+wfKR9NSmLN30DXAQnxEOVHVeYnqSdc/TNFC+HeA=
+			</data>
+		</dict>
+		<key>resource.bundle/inject_mapo.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Qe/c7vk6Y3RXbUGPm7PgoP09vLc=
+			</data>
+			<key>hash2</key>
+			<data>
+			biIab+6FgfFV1ijpZgNhNfZ6eMWeGYS73Yp78MWKnq4=
 			</data>
 		</dict>
 		<key>resource.bundle/inject_matic.js</key>

@@ -64,7 +64,10 @@ class DappViewController: BaseViewController {
         dappList?.append(dappModel2)
         
         
-        let dappModel3 = DappModel(wid: UserDefaultUtil.getValue(key: ZUSERDEFAULT_CURRENTWALLET) as? String, name: "MAP-Map Staking", url: "https://staking.mapprotocol.io/", chain: "MAP")
+//        let dappModel3 = DappModel(wid: UserDefaultUtil.getValue(key: ZUSERDEFAULT_CURRENTWALLET) as? String, name: "MAP-Map Staking", url: "https://staking.mapprotocol.io/", chain: "MAP")
+//        dappList?.append(dappModel3)
+        
+        let dappModel3 = DappModel(wid: UserDefaultUtil.getValue(key: ZUSERDEFAULT_CURRENTWALLET) as? String, name: "MAPO-Map Staking", url: "https://staking.mapprotocol.io/", chain: "MAPO")
         dappList?.append(dappModel3)
         
         let dappModel4 = DappModel(wid: UserDefaultUtil.getValue(key: ZUSERDEFAULT_CURRENTWALLET) as? String, name: "FTM-Jetswap", url: "https://fantom.jetswap.finance/", chain: "FTM")

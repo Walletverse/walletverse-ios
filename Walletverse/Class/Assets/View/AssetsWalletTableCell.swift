@@ -98,6 +98,8 @@ class AssetsWalletTableCell: BaseTableViewCell {
             return "icon_local_klay_unchecked_light"
         case "MAP":
             return "icon_local_map_unchecked_light"
+        case "MAPO":
+            return "icon_local_map_unchecked_light"
         case "MEV":
             return "icon_local_mev_unchecked_light"
         case "OKT":

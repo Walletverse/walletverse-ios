@@ -26,7 +26,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		3qbTKck3iFvUFz/1p5+G/pa35yk=
+		YR8v8RndbVQatNFuZio6xpSxT08=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		E6b97ZnEy24GWWF7TxIImVDIwYQ=
+		t4yYEFU2tJWE4/DQgoOTGEhhQ8o=
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -103,6 +103,10 @@
 		<key>resource.bundle/inject_map.js</key>
 		<data>
 		n+mrRU99c+gkxp9TH351u3I2WBA=
+		</data>
+		<key>resource.bundle/inject_mapo.js</key>
+		<data>
+		Qe/c7vk6Y3RXbUGPm7PgoP09vLc=
 		</data>
 		<key>resource.bundle/inject_matic.js</key>
 		<data>
@@ -209,11 +213,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			E6b97ZnEy24GWWF7TxIImVDIwYQ=
+			t4yYEFU2tJWE4/DQgoOTGEhhQ8o=
 			</data>
 			<key>hash2</key>
 			<data>
-			nwVnSUuIGNDfIz2tUxGH6QNGUCfG671rX/gWQK25VZQ=
+			yB2qcPJUOvQK+LfPN17m8W+V1Ectg9T1KRFYeqr2VEo=
 			</data>
 		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.abi.json</key>
@@ -401,6 +405,17 @@
 			<key>hash2</key>
 			<data>
 			B6e+wfKR9NSmLN30DXAQnxEOVHVeYnqSdc/TNFC+HeA=
+			</data>
+		</dict>
+		<key>resource.bundle/inject_mapo.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Qe/c7vk6Y3RXbUGPm7PgoP09vLc=
+			</data>
+			<key>hash2</key>
+			<data>
+			biIab+6FgfFV1ijpZgNhNfZ6eMWeGYS73Yp78MWKnq4=
 			</data>
 		</dict>
 		<key>resource.bundle/inject_matic.js</key>
