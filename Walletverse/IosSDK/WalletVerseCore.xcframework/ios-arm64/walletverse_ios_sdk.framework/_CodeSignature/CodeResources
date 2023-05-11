@@ -34,19 +34,27 @@
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		t4yYEFU2tJWE4/DQgoOTGEhhQ8o=
+		bs2K6IhK2m+9oWfAP2BfSq0v7II=
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		FSPnLbho3G+LL9smI3XgVOqBIQ4=
+		88VwuE109S1nO0DmcFUxkZ+EJqw=
+		</data>
+		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<data>
+		RtWfzqxoNlcnw8P0DsV36TD0ICQ=
 		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
 		UIpAbgVP3IMumcfEHFt/cTeyDNQ=
 		</data>
+		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<data>
+		RtWfzqxoNlcnw8P0DsV36TD0ICQ=
+		</data>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		kVT9sewJSwmbzUroRjHZb5kHQRc=
+		lQ5GbVHOsIGoZJL5dIgd4eDmdYs=
 		</data>
 		<key>resource.bundle/bundle.js</key>
 		<data>
@@ -213,22 +221,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			t4yYEFU2tJWE4/DQgoOTGEhhQ8o=
+			bs2K6IhK2m+9oWfAP2BfSq0v7II=
 			</data>
 			<key>hash2</key>
 			<data>
-			yB2qcPJUOvQK+LfPN17m8W+V1Ectg9T1KRFYeqr2VEo=
+			0IyCTAePOmGD8Lg4Tk3Q3R9VteaF4FGj3+cRayqjCQY=
 			</data>
 		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			FSPnLbho3G+LL9smI3XgVOqBIQ4=
+			88VwuE109S1nO0DmcFUxkZ+EJqw=
 			</data>
 			<key>hash2</key>
 			<data>
-			KnRdWE4y6t4QM5zi5JDptPdHFgJy1Tku+7GLkZS2aNM=
+			GsHZmjQSiMmbeLTSFbLpiskiVl9FQFHpGSt/1Cz37Po=
+			</data>
+		</dict>
+		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RtWfzqxoNlcnw8P0DsV36TD0ICQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			sHFD4Z29jYg/HnWqNMo1hXlAQPlyP5EnQ27MH3+62KE=
 			</data>
 		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -242,15 +261,26 @@
 			X1Do61kvucKu2gm+mDIjFu11X5RuAYrCfIp7ggSzuBQ=
 			</data>
 		</dict>
+		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			RtWfzqxoNlcnw8P0DsV36TD0ICQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			sHFD4Z29jYg/HnWqNMo1hXlAQPlyP5EnQ27MH3+62KE=
+			</data>
+		</dict>
 		<key>Modules/walletverse_ios_sdk.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kVT9sewJSwmbzUroRjHZb5kHQRc=
+			lQ5GbVHOsIGoZJL5dIgd4eDmdYs=
 			</data>
 			<key>hash2</key>
 			<data>
-			lEwDA2JBnz0figQUZ9CTpFTXwVg0a/cMM6xAzl0UjUA=
+			nTF9oDn1qeqSUak17XZzhLFwgbz8Ydf8+AYzo7YNTcU=
 			</data>
 		</dict>
 		<key>resource.bundle/bundle.js</key>

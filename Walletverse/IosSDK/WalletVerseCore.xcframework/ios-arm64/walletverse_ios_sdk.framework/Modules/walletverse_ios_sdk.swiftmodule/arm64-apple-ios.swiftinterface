@@ -1,0 +1,987 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name walletverse_ios_sdk
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Alamofire
+import CommonCrypto
+import CryptoSwift
+import Foundation
+import GRDB
+import MBProgressHUD
+import Moya
+import Swift
+import SwiftyJSON
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+@_exported import walletverse_ios_sdk
+open class DateTransform : walletverse_ios_sdk.TransformType {
+  public typealias Object = Foundation.Date
+  public typealias JSON = Swift.Double
+  public init()
+  open func transformFromJSON(_ value: Any?) -> Foundation.Date?
+  open func transformToJSON(_ value: Foundation.Date?) -> Swift.Double?
+  @objc deinit
+}
+extension walletverse_ios_sdk.HandyJSON {
+  public func toJSON() -> [Swift.String : Any]?
+  public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+}
+extension Swift.Collection where Self.Element : walletverse_ios_sdk.HandyJSON {
+  public func toJSON() -> [[Swift.String : Any]?]
+  public func toJSONString(prettyPrint: Swift.Bool = false) -> Swift.String?
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class CoinModel : GRDB.Record, Foundation.NSCoding {
+  public var id: Swift.Int64?
+  public var chainId: Swift.String?
+  public var symbol: Swift.String?
+  public var name: Swift.String?
+  public var chainName: Swift.String?
+  public var contract: Swift.String?
+  public var contractAddress: Swift.String?
+  public var iconUrl: Swift.String?
+  public var scanUrl: Swift.String?
+  public var rpcUrl: Swift.String?
+  public var decimals: Swift.String?
+  public var type: Swift.String?
+  public var vm: Swift.String?
+  public var extra: Swift.String?
+  override public func encode(to container: inout GRDB.PersistenceContainer)
+  override public func didInsert(with rowID: Swift.Int64, for column: Swift.String?)
+  override public class var databaseTableName: Swift.String {
+    get
+  }
+  @objc required public init(coder decoder: Foundation.NSCoder)
+  @objc public func encode(with coder: Foundation.NSCoder)
+  public func fromWalletCoin(walletCoin: walletverse_ios_sdk.WalletCoinModel)
+  @objc deinit
+}
+public protocol DappWebviewDelegate {
+  func DappMessageDelegate(json: SwiftyJSON.JSON?)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class DappWebview : WebKit.WKWebView {
+  @_Concurrency.MainActor(unsafe) public var progressView: UIKit.UIProgressView?
+  @_Concurrency.MainActor(unsafe) public var dappModel: walletverse_ios_sdk.DappModel?
+  @_Concurrency.MainActor(unsafe) public var dappDelegate: walletverse_ios_sdk.DappWebviewDelegate?
+  @_Concurrency.MainActor(unsafe) public var chainAccount: walletverse_ios_sdk.WalletCoinModel?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public init(frame: CoreFoundation.CGRect)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  @_Concurrency.MainActor(unsafe) public func methodCallback(id: Swift.String, err: Swift.String, data: Swift.String)
+}
+extension walletverse_ios_sdk.DappWebview : WebKit.WKNavigationDelegate, WebKit.WKUIDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_: WebKit.WKWebView, didFailProvisionalNavigation navigation: WebKit.WKNavigation, withError error: Swift.Error)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_: WebKit.WKWebView, createWebViewWith _: WebKit.WKWebViewConfiguration, for navigationAction: WebKit.WKNavigationAction, windowFeatures _: WebKit.WKWindowFeatures) -> WebKit.WKWebView?
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_: WebKit.WKWebView, decidePolicyFor _: WebKit.WKNavigationResponse, decisionHandler: @escaping (WebKit.WKNavigationResponsePolicy) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_: WebKit.WKWebView, decidePolicyFor _: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didCommit navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didStartProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WebKit.WKNavigation!)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFinish navigation: WebKit.WKNavigation!)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func restartInject()
+  @_Concurrency.MainActor(unsafe) public func buildAccount()
+  @_Concurrency.MainActor(unsafe) public func matchAccount(chain: Swift.String?, address: Swift.String?, rpc: Swift.String?, chainId: Swift.String?, url: Swift.String?, apiKey: Swift.String = "") -> Swift.String
+}
+extension walletverse_ios_sdk.DappWebview : WebKit.WKScriptMessageHandler {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+@_hasMissingDesignatedInitializers public class UserConfig {
+  public var uuid: Swift.String?
+  public var language: walletverse_ios_sdk.Language?
+  public var currency: walletverse_ios_sdk.Currency?
+  public var cs: walletverse_ios_sdk.Unit?
+  public init()
+  @objc deinit
+}
+public struct SaveCoinParams : walletverse_ios_sdk.HandyJSON {
+  public var wid: Swift.String?
+  public var pin: Swift.String?
+  public var walletCoinModel: walletverse_ios_sdk.WalletCoinModel?
+  public init()
+  public init(wid: Swift.String? = nil, pin: Swift.String? = nil, walletCoinModel: walletverse_ios_sdk.WalletCoinModel? = nil)
+}
+public struct GetChainsParams : walletverse_ios_sdk.HandyJSON {
+  public var vm: Swift.String?
+  public init()
+  public init(vm: Swift.String? = nil)
+}
+public struct DecodeMessageParams : walletverse_ios_sdk.HandyJSON {
+  public var message: Swift.String?
+  public var password: Swift.String?
+  public init()
+  public init(message: Swift.String? = nil, password: Swift.String? = nil)
+}
+public struct TokenParams : walletverse_ios_sdk.HandyJSON {
+  public var page: Swift.String?
+  public var size: Swift.String?
+  public var chainId: Swift.String?
+  public init()
+  public init(page: Swift.String? = nil, size: Swift.String? = nil, chainId: Swift.String? = nil)
+}
+public struct GetTokenParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var contractAddress: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, contractAddress: Swift.String? = nil)
+}
+public struct TransactionRecordParams : walletverse_ios_sdk.HandyJSON {
+  public var page: Swift.String?
+  public var size: Swift.String?
+  public var chainId: Swift.String?
+  public var address: Swift.String?
+  public var condition: walletverse_ios_sdk.Condition?
+  public var contractAddress: Swift.String?
+  public init()
+  public init(page: Swift.String? = nil, size: Swift.String? = nil, chainId: Swift.String? = nil, address: Swift.String? = nil, condition: walletverse_ios_sdk.Condition? = nil, contractAddress: Swift.String? = nil)
+}
+public struct GetPriceParams : walletverse_ios_sdk.HandyJSON {
+  public var symbol: Swift.String?
+  public var contractAddress: Swift.String?
+  public init()
+  public init(symbol: Swift.String? = nil, contractAddress: Swift.String? = nil)
+}
+public struct FederatedParams : walletverse_ios_sdk.HandyJSON {
+  public var providerKey: Swift.String?
+  public var providerUid: Swift.String?
+  public var providerId: Swift.String?
+  public var auth: Swift.String?
+  public init()
+  public init(providerKey: Swift.String? = nil, providerUid: Swift.String? = nil, providerId: Swift.String? = nil, auth: Swift.String? = nil)
+}
+public struct ValidateAddressParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var address: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, address: Swift.String? = nil)
+}
+public struct ValidatePrivateKeyParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var privateKey: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, privateKey: Swift.String? = nil)
+}
+public struct ValidateMnemonicParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var mnemonic: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, mnemonic: Swift.String? = nil)
+}
+public struct SignMessageParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var privateKey: Swift.String?
+  public var message: walletverse_ios_sdk.DAppMessageParams?
+  public init()
+  public init(chainId: Swift.String? = nil, privateKey: Swift.String? = nil, message: walletverse_ios_sdk.DAppMessageParams? = nil)
+}
+public struct DAppMessageParams : walletverse_ios_sdk.HandyJSON {
+  public var data: Swift.String?
+  public var __type: Swift.String?
+  public var privateKey: Swift.String?
+  public var nonce: Swift.String?
+  public init()
+  public init(data: Swift.String? = nil, __type: Swift.String? = nil, privateKey: Swift.String? = nil, nonce: Swift.String? = nil)
+}
+public struct SignTransactionParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var privateKey: Swift.String?
+  public var to: Swift.String?
+  public var value: Swift.String?
+  public var decimals: Swift.Int?
+  public var gasPrice: Swift.String?
+  public var gasLimit: Swift.String?
+  public var nonce: Swift.String?
+  public var inputData: Swift.String?
+  public var contractAddress: Swift.String?
+  public init(chainId: Swift.String? = nil, privateKey: Swift.String? = nil, to: Swift.String? = nil, value: Swift.String? = nil, decimals: Swift.Int? = nil, gasPrice: Swift.String? = nil, gasLimit: Swift.String? = nil, nonce: Swift.String? = nil, inputData: Swift.String? = nil, contractAddress: Swift.String? = nil)
+  public init()
+}
+public struct SignAndTransactionParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var privateKey: Swift.String?
+  public var from: Swift.String?
+  public var to: Swift.String?
+  public var value: Swift.String?
+  public var decimals: Swift.Int?
+  public var gasPrice: Swift.String?
+  public var gasLimit: Swift.String?
+  public var inputData: Swift.String?
+  public var contractAddress: Swift.String?
+  public var walletPin: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, privateKey: Swift.String? = nil, from: Swift.String? = nil, to: Swift.String? = nil, value: Swift.String? = nil, decimals: Swift.Int? = nil, gasPrice: Swift.String? = nil, gasLimit: Swift.String? = nil, inputData: Swift.String? = nil, contractAddress: Swift.String? = nil, walletPin: Swift.String? = nil)
+}
+public struct GetParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var address: Swift.String?
+  public var contractAddress: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, address: Swift.String? = nil, contractAddress: Swift.String? = nil)
+}
+public struct TransactionParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var from: Swift.String?
+  public var to: Swift.String?
+  public var sign: Swift.String?
+  public var value: Swift.String?
+  public var contractAddress: Swift.String?
+  public init(chainId: Swift.String? = nil, from: Swift.String? = nil, to: Swift.String? = nil, sign: Swift.String? = nil, value: Swift.String? = nil, contractAddress: Swift.String? = nil)
+  public init()
+}
+public struct EncodeERC20ABIParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var contractMethod: Swift.String?
+  public var contractAddress: Swift.String?
+  public var params: [Swift.String]?
+  public var abi: [[Swift.String : Any]]?
+  public init()
+  public init(chainId: Swift.String? = nil, contractMethod: Swift.String? = nil, contractAddress: Swift.String? = nil, params: [Swift.String]? = nil, abi: [[Swift.String : Any]]? = nil)
+}
+public struct CreateWeb2Params : walletverse_ios_sdk.HandyJSON {
+  public var mnemonic: Swift.String?
+  public var wallets: [walletverse_ios_sdk.Coin]?
+  public var walletName: Swift.String?
+  public var walletPin: Swift.String?
+  public var password: Swift.String?
+  public var federatedParams: walletverse_ios_sdk.FederatedParams?
+  public init()
+  public init(mnemonic: Swift.String? = nil, wallets: [walletverse_ios_sdk.Coin]? = nil, walletName: Swift.String? = nil, walletPin: Swift.String? = nil, password: Swift.String? = nil, federatedParams: walletverse_ios_sdk.FederatedParams? = nil)
+}
+public struct RestoreWeb2Params : walletverse_ios_sdk.HandyJSON {
+  public var shards: [Swift.String]?
+  public var wallets: [walletverse_ios_sdk.Coin]?
+  public var walletName: Swift.String?
+  public var walletPin: Swift.String?
+  public var password: Swift.String?
+  public var federatedParams: walletverse_ios_sdk.FederatedParams?
+  public init()
+  public init(shards: [Swift.String]? = nil, wallets: [walletverse_ios_sdk.Coin]? = nil, walletName: Swift.String? = nil, walletPin: Swift.String? = nil, password: Swift.String? = nil, federatedParams: walletverse_ios_sdk.FederatedParams? = nil)
+}
+public struct EmailCodeParams : walletverse_ios_sdk.HandyJSON {
+  public var vcode: Swift.String?
+  public var text: Swift.String?
+  public var type: Swift.String?
+  public var account: Swift.String?
+  public init(vcode: Swift.String? = nil, text: Swift.String? = nil, type: Swift.String? = nil, account: Swift.String? = nil)
+  public init()
+}
+public struct EmailVerifyParams : walletverse_ios_sdk.HandyJSON {
+  public var vcode: Swift.String?
+  public var account: Swift.String?
+  public init(vcode: Swift.String? = nil, account: Swift.String? = nil)
+  public init()
+}
+public struct InitChainParams : walletverse_ios_sdk.HandyJSON {
+  public var wid: Swift.String?
+  public var address: Swift.String?
+  public var privateKey: Swift.String?
+  public var walletPin: Swift.String?
+  public var chainId: Swift.String?
+  public var contract: Swift.String?
+  public var symbol: Swift.String?
+  public init(wid: Swift.String? = nil, address: Swift.String? = nil, privateKey: Swift.String? = nil, walletPin: Swift.String? = nil, chainId: Swift.String? = nil, contract: Swift.String? = nil, symbol: Swift.String? = nil)
+  public init()
+}
+public struct ChainNonce : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var address: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, address: Swift.String? = nil)
+}
+public struct CoinBalance : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var address: Swift.String?
+  public var contractAddress: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, address: Swift.String? = nil, contractAddress: Swift.String? = nil)
+}
+public struct CoinDecimals : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var contractAddress: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, contractAddress: Swift.String? = nil)
+}
+public struct ChainGasPrice : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil)
+}
+public struct CoinFee : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var from: Swift.String?
+  public var to: Swift.String?
+  public var value: Swift.String?
+  public var decimals: Swift.String?
+  public var data: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, from: Swift.String? = nil, to: Swift.String? = nil, value: Swift.String? = nil, decimals: Swift.String? = nil, data: Swift.String? = nil)
+}
+public struct NftItemsParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var address: Swift.String?
+  public var contractAddress: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, address: Swift.String? = nil, contractAddress: Swift.String? = nil)
+}
+public struct NftDetailParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var tokenId: Swift.String?
+  public var contractAddress: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, tokenId: Swift.String? = nil, contractAddress: Swift.String? = nil)
+}
+public struct NftTransferDataParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var tokenId: Swift.String?
+  public var contractAddress: Swift.String?
+  public var from: Swift.String?
+  public var to: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, tokenId: Swift.String? = nil, contractAddress: Swift.String? = nil, from: Swift.String? = nil, to: Swift.String? = nil)
+}
+public struct NftTokenURIParams : walletverse_ios_sdk.HandyJSON {
+  public var chainId: Swift.String?
+  public var tokenId: Swift.String?
+  public var contractAddress: Swift.String?
+  public init()
+  public init(chainId: Swift.String? = nil, tokenId: Swift.String? = nil, contractAddress: Swift.String? = nil)
+}
+public struct ChainModel : walletverse_ios_sdk.HandyJSON {
+  public var address: Swift.String?
+  public var rpcUrl: Swift.String?
+  public var chainId: Swift.String?
+  public var apiKey: Swift.String?
+  public init()
+  public init(address: Swift.String? = nil, rpcUrl: Swift.String? = nil, chainId: Swift.String? = nil, apiKey: Swift.String? = nil)
+}
+open class DateFormatterTransform : walletverse_ios_sdk.TransformType {
+  public typealias Object = Foundation.Date
+  public typealias JSON = Swift.String
+  final public let dateFormatter: Foundation.DateFormatter
+  public init(dateFormatter: Foundation.DateFormatter)
+  open func transformFromJSON(_ value: Any?) -> Foundation.Date?
+  open func transformToJSON(_ value: Foundation.Date?) -> Swift.String?
+  @objc deinit
+}
+public let Chains: [Swift.String : [Swift.String : Swift.String]]
+extension walletverse_ios_sdk.HandyJSON {
+  public static func deserialize(from dict: Foundation.NSDictionary?, designatedPath: Swift.String? = nil) -> Self?
+  public static func deserialize(from dict: [Swift.String : Any]?, designatedPath: Swift.String? = nil) -> Self?
+  public static func deserialize(from json: Swift.String?, designatedPath: Swift.String? = nil) -> Self?
+}
+extension Swift.Array where Element : walletverse_ios_sdk.HandyJSON {
+  public static func deserialize(from json: Swift.String?, designatedPath: Swift.String? = nil) -> [Element?]?
+  public static func deserialize(from array: Foundation.NSArray?) -> [Element?]?
+  public static func deserialize(from array: [Any]?) -> [Element?]?
+}
+@_hasMissingDesignatedInitializers public class JSONDeserializer<T> where T : walletverse_ios_sdk.HandyJSON {
+  public static func deserializeFrom(dict: Foundation.NSDictionary?, designatedPath: Swift.String? = nil) -> T?
+  public static func deserializeFrom(dict: [Swift.String : Any]?, designatedPath: Swift.String? = nil) -> T?
+  public static func deserializeFrom(json: Swift.String?, designatedPath: Swift.String? = nil) -> T?
+  public static func update(object: inout T, from dict: [Swift.String : Any]?, designatedPath: Swift.String? = nil)
+  public static func update(object: inout T, from json: Swift.String?, designatedPath: Swift.String? = nil)
+  public static func deserializeModelArrayFrom(json: Swift.String?, designatedPath: Swift.String? = nil) -> [T?]?
+  public static func deserializeModelArrayFrom(array: Foundation.NSArray?) -> [T?]?
+  public static func deserializeModelArrayFrom(array: [Any]?) -> [T?]?
+  @objc deinit
+}
+public struct CoinAddModel : walletverse_ios_sdk.HandyJSON {
+  public init()
+}
+public struct Coin : walletverse_ios_sdk.HandyJSON {
+  public var id: Swift.Int64
+  public var chainId: Swift.String?
+  public var wid: Swift.String?
+  public var address: Swift.String?
+  public var privateKey: Swift.String?
+  public var symbol: Swift.String?
+  public var name: Swift.String?
+  public var contract: Swift.String?
+  public var contractAddress: Swift.String?
+  public var iconUrl: Swift.String?
+  public var balance: Swift.String?
+  public var price: Swift.String?
+  public var totalPrice: Swift.String?
+  public var extra: Swift.String?
+  public var chainName: Swift.String?
+  public var scanUrl: Swift.String?
+  public var rpcUrl: Swift.String?
+  public var decimals: Swift.String?
+  public var type: Swift.String?
+  public var vm: Swift.String?
+  public var isAdd: Swift.Bool
+  public var lib: Swift.String?
+  public var color: Swift.String?
+  public var weth: Swift.String?
+  public var scanDelay: Swift.String?
+  public init()
+  public init(id: Swift.Int64, chainId: Swift.String? = nil, wid: Swift.String? = nil, address: Swift.String? = nil, privateKey: Swift.String? = nil, symbol: Swift.String? = nil, name: Swift.String? = nil, contract: Swift.String? = nil, contractAddress: Swift.String? = nil, iconUrl: Swift.String? = nil, balance: Swift.String? = nil, price: Swift.String? = nil, totalPrice: Swift.String? = nil, extra: Swift.String? = nil, chainName: Swift.String? = nil, scanUrl: Swift.String? = nil, rpcUrl: Swift.String? = nil, decimals: Swift.String? = nil, type: Swift.String? = nil, vm: Swift.String? = nil, isAdd: Swift.Bool, lib: Swift.String? = nil, color: Swift.String? = nil, weth: Swift.String? = nil, scanDelay: Swift.String? = nil)
+}
+public struct ChainChainsModel : walletverse_ios_sdk.HandyJSON {
+  public var items: Swift.Array<walletverse_ios_sdk.Coin>?
+  public init()
+  public init(items: Swift.Array<walletverse_ios_sdk.Coin>? = nil)
+}
+public struct CoinListModel : walletverse_ios_sdk.HandyJSON {
+  public var items: Swift.Array<walletverse_ios_sdk.Coin>?
+  public init()
+  public init(items: Swift.Array<walletverse_ios_sdk.Coin>? = nil)
+}
+public struct TransactionListModel : walletverse_ios_sdk.HandyJSON {
+  public var items: Swift.Array<walletverse_ios_sdk.TransactionRecord>?
+  public init()
+  public init(items: Swift.Array<walletverse_ios_sdk.TransactionRecord>? = nil)
+}
+public struct TransactionRecord : walletverse_ios_sdk.HandyJSON {
+  public var symbol: Swift.String?
+  public var blockHash: Swift.String?
+  public var blockNumber: Swift.String?
+  public var contract: Swift.String?
+  public var from: Swift.String?
+  public var gas: Swift.String?
+  public var gasLimit: Swift.String?
+  public var gasPrice: Swift.String?
+  public var hash: Swift.String?
+  public var input: Swift.String?
+  public var nonce: Swift.String?
+  public var scanAddressUrl: Swift.String?
+  public var scanUrl: Swift.String?
+  public var timestamp: Swift.String?
+  public var to: Swift.String?
+  public var type: Swift.String?
+  public var value: Swift.String?
+  public var status: Swift.String?
+  public init()
+  public init(symbol: Swift.String? = nil, blockHash: Swift.String? = nil, blockNumber: Swift.String? = nil, contract: Swift.String? = nil, from: Swift.String? = nil, gas: Swift.String? = nil, gasLimit: Swift.String? = nil, gasPrice: Swift.String? = nil, hash: Swift.String? = nil, input: Swift.String? = nil, nonce: Swift.String? = nil, scanAddressUrl: Swift.String? = nil, scanUrl: Swift.String? = nil, timestamp: Swift.String? = nil, to: Swift.String? = nil, type: Swift.String? = nil, value: Swift.String? = nil, status: Swift.String? = nil)
+}
+public struct CoinPriceModel : walletverse_ios_sdk.HandyJSON {
+  public var price: Swift.String?
+  public init()
+  public init(price: Swift.String? = nil)
+}
+public struct ChainSendModel : walletverse_ios_sdk.HandyJSON {
+  public var hash: Swift.String?
+  public init()
+  public init(hash: Swift.String? = nil)
+}
+public struct UserprofileModel : walletverse_ios_sdk.HandyJSON {
+  public var wid: Swift.String?
+  public var shards: [Swift.String]?
+  public var wallets: [walletverse_ios_sdk.Coin]?
+  public init()
+  public init(wid: Swift.String? = nil, shards: [Swift.String]? = nil, wallets: [walletverse_ios_sdk.Coin]? = nil)
+}
+public struct EmailCodeModel : walletverse_ios_sdk.HandyJSON {
+  public var data: Swift.String?
+  public var text: Swift.String?
+  public init()
+  public init(data: Swift.String? = nil, text: Swift.String? = nil)
+}
+public struct DefaultModel : walletverse_ios_sdk.HandyJSON {
+  public var result: Swift.Bool?
+  public var auth: Swift.String?
+  public init()
+  public init(result: Swift.Bool? = nil, auth: Swift.String? = nil)
+}
+public struct NativeModel : walletverse_ios_sdk.HandyJSON {
+  public var code: Swift.String?
+  public var msg: Swift.String?
+  public var data: Swift.String?
+  public init()
+  public init(code: Swift.String? = nil, msg: Swift.String? = nil, data: Swift.String? = nil)
+}
+public struct ChainNonceModel : walletverse_ios_sdk.HandyJSON {
+  public var nonce: Swift.String?
+  public init()
+  public init(nonce: Swift.String? = nil)
+}
+public struct CoinBalanceModel : walletverse_ios_sdk.HandyJSON {
+  public var balance: Swift.String?
+  public init()
+  public init(balance: Swift.String? = nil)
+}
+public struct CoinDecimalsModel : walletverse_ios_sdk.HandyJSON {
+  public var decimals: Swift.String?
+  public init()
+  public init(decimals: Swift.String? = nil)
+}
+public struct ChainGasPriceModel : walletverse_ios_sdk.HandyJSON {
+  public var gasprice: Swift.String?
+  public init()
+  public init(gasprice: Swift.String? = nil)
+}
+public struct ChainFeeModel : walletverse_ios_sdk.HandyJSON {
+  public var gasPrice: Swift.String?
+  public var gasLimit: Swift.String?
+  public init()
+  public init(gasPrice: Swift.String? = nil, gasLimit: Swift.String? = nil)
+}
+public struct NftItemsModel : walletverse_ios_sdk.HandyJSON {
+  public var items: Swift.Array<walletverse_ios_sdk.NftModel>?
+  public init()
+  public init(items: Swift.Array<walletverse_ios_sdk.NftModel>? = nil)
+}
+public struct NftModel : walletverse_ios_sdk.HandyJSON {
+  public var address: Swift.String?
+  public var chainId: Swift.String?
+  public var contractAddress: Swift.String?
+  public var ct: Swift.String?
+  public var external_url: Swift.String?
+  public var id: Swift.String?
+  public var image: Swift.String?
+  public var name: Swift.String?
+  public var tokenId: Swift.String?
+  public var url: Swift.String?
+  public var ut: Swift.String?
+  public var attributes: Swift.Array<walletverse_ios_sdk.NftAttribute>?
+  public init()
+  public init(address: Swift.String? = nil, chainId: Swift.String? = nil, contractAddress: Swift.String? = nil, ct: Swift.String? = nil, external_url: Swift.String? = nil, id: Swift.String? = nil, image: Swift.String? = nil, name: Swift.String? = nil, tokenId: Swift.String? = nil, url: Swift.String? = nil, ut: Swift.String? = nil, attributes: Swift.Array<walletverse_ios_sdk.NftAttribute>? = nil)
+}
+public struct NftAttribute : walletverse_ios_sdk.HandyJSON {
+  public var trait_type: Swift.String?
+  public var value: Swift.String?
+  public init()
+  public init(trait_type: Swift.String? = nil, value: Swift.String? = nil)
+}
+public struct NftTransferDataModel : walletverse_ios_sdk.HandyJSON {
+  public var inputData: Swift.String?
+  public init()
+  public init(inputData: Swift.String? = nil)
+}
+public struct NftTokenURIModel : walletverse_ios_sdk.HandyJSON {
+  public var tokenURI: Swift.String?
+  public init()
+  public init(tokenURI: Swift.String? = nil)
+}
+public struct DappModel : walletverse_ios_sdk.HandyJSON {
+  public var wid: Swift.String?
+  public var name: Swift.String?
+  public var url: Swift.String?
+  public var chain: Swift.String?
+  public init()
+  public init(wid: Swift.String? = nil, name: Swift.String? = nil, url: Swift.String? = nil, chain: Swift.String? = nil)
+}
+public protocol _RawEnumProtocol : walletverse_ios_sdk._Transformable {
+  static func _transform(from object: Any) -> Self?
+  func _plainValue() -> Any?
+}
+extension Swift.RawRepresentable where Self : walletverse_ios_sdk._RawEnumProtocol {
+  public static func _transform(from object: Any) -> Self?
+  public func _plainValue() -> Any?
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class IdentityModel : GRDB.Record, Foundation.NSCoding {
+  public var id: Swift.Int64?
+  public var wid: Swift.String?
+  public var name: Swift.String?
+  public var tokenType: Swift.String?
+  public var token: Swift.String?
+  required public init(row: GRDB.Row)
+  override public func encode(to container: inout GRDB.PersistenceContainer)
+  override public func didInsert(with rowID: Swift.Int64, for column: Swift.String?)
+  override public class var databaseTableName: Swift.String {
+    get
+  }
+  @objc required public init(coder decoder: Foundation.NSCoder)
+  @objc public func encode(with coder: Foundation.NSCoder)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class Constant : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+}
+public var Constant_Server: Swift.String
+public var Constant_MerchantId: Swift.String
+public var Constant_Appid: Swift.String
+public var Constant_Appkey: Swift.String
+public let Constant_LANGUAGE: Swift.String
+public let Constant_CURRENCY: Swift.String
+public let Constant_UNIT: Swift.String
+public var Constant_UUID: Swift.String
+public let Constant_Chars: Swift.String
+@objc @_inheritsConvenienceInitializers public class CommonUtils : ObjectiveC.NSObject {
+  public static func stringIsEmpty(value: Swift.AnyObject?) -> Swift.Bool
+  public static func specialCharValidate(_ string: Swift.String) -> Swift.Bool
+  public static func letterValidate(_ string: Swift.String) -> Swift.Bool
+  public static func numberValidate(_ string: Swift.String) -> Swift.Bool
+  public static func toolsChangeToJson(info: Any?) -> Swift.String
+  public static func getUUID() -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+open class URLTransform : walletverse_ios_sdk.TransformType {
+  public typealias Object = Foundation.URL
+  public typealias JSON = Swift.String
+  public init(shouldEncodeURLString: Swift.Bool = true)
+  open func transformFromJSON(_ value: Any?) -> Foundation.URL?
+  open func transformToJSON(_ value: Foundation.URL?) -> Swift.String?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class WalletCoinModel : GRDB.Record, Foundation.NSCoding {
+  public var id: Swift.Int64?
+  public var chainId: Swift.String?
+  public var symbol: Swift.String?
+  public var name: Swift.String?
+  public var chainName: Swift.String?
+  public var contract: Swift.String?
+  public var contractAddress: Swift.String?
+  public var iconUrl: Swift.String?
+  public var scanUrl: Swift.String?
+  public var rpcUrl: Swift.String?
+  public var decimals: Swift.String?
+  public var type: Swift.String?
+  public var vm: Swift.String?
+  public var extra: Swift.String?
+  public var wid: Swift.String?
+  public var address: Swift.String?
+  public var privateKey: Swift.String?
+  public var balance: Swift.String?
+  public var price: Swift.String?
+  public var totalPrice: Swift.String?
+  public var isAdd: Swift.Bool
+  override public func encode(to container: inout GRDB.PersistenceContainer)
+  override public func didInsert(with rowID: Swift.Int64, for column: Swift.String?)
+  override public class var databaseTableName: Swift.String {
+    get
+  }
+  @objc required public init(coder decoder: Foundation.NSCoder)
+  @objc public func encode(with coder: Foundation.NSCoder)
+  public func updateFromCoin(coin: walletverse_ios_sdk.Coin)
+  public func updateFromCoinModel(coin: walletverse_ios_sdk.CoinModel)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class Walletverse : ObjectiveC.NSObject {
+  public class func shareSingleton() -> walletverse_ios_sdk.Walletverse
+  public static func getIdentityModel() -> walletverse_ios_sdk.IdentityModel
+  public static func getCoinModel() -> walletverse_ios_sdk.CoinModel
+  public static func getWalletCoinModel() -> walletverse_ios_sdk.WalletCoinModel
+  public static func install(appId: Swift.String?, appKey: Swift.String?, userConfig: walletverse_ios_sdk.UserConfig?, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func getSDKVersionCode() -> Swift.Int
+  public static func getSDKVersionName() -> Swift.String
+  public static func changeCurrency(currency: walletverse_ios_sdk.Currency) -> Swift.Bool
+  public static func changeLanguage(language: walletverse_ios_sdk.Language) -> Swift.Bool
+  public static func changeUnit(unit: walletverse_ios_sdk.Unit) -> Swift.Bool
+  public static func validatePassword(password: Swift.String) -> Swift.Bool
+  public static func saveWalletCoin(saveCoinParams: walletverse_ios_sdk.SaveCoinParams, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func saveCoinWithMnemonic(coinModel: walletverse_ios_sdk.WalletCoinModel?, contentEn: Swift.String?, walletPin: Swift.String? = "", wid: Swift.String, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func saveCoinWithPrivateKey(coinModel: walletverse_ios_sdk.WalletCoinModel?, contentEn: Swift.String?, walletPin: Swift.String? = "", wid: Swift.String, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func deleteWalletCoin(walletCoinModel: walletverse_ios_sdk.WalletCoinModel, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func updateWalletCoin(walletCoinModel: walletverse_ios_sdk.WalletCoinModel, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func queryWalletCoin(walletCoinModel: walletverse_ios_sdk.WalletCoinModel, callback: @escaping (_ result: walletverse_ios_sdk.WalletCoinModel?) -> ())
+  public static func queryWalletCoins(walletCoinModel: walletverse_ios_sdk.WalletCoinModel, callback: @escaping (_ result: [walletverse_ios_sdk.WalletCoinModel]?) -> ())
+  public static func insertIdentity(identityModel: walletverse_ios_sdk.IdentityModel, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func deleteIdentity(identityModel: walletverse_ios_sdk.IdentityModel, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func updateIdentity(identityModel: walletverse_ios_sdk.IdentityModel, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func queryIdentity(identityModel: walletverse_ios_sdk.IdentityModel, callback: @escaping (_ result: walletverse_ios_sdk.IdentityModel?) -> ())
+  public static func queryIdentities(callback: @escaping (_ result: [walletverse_ios_sdk.IdentityModel]?) -> ())
+  public static func insertCoin(coinModel: walletverse_ios_sdk.CoinModel, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func queryCoin(coinModel: walletverse_ios_sdk.CoinModel, callback: @escaping (_ result: walletverse_ios_sdk.CoinModel?) -> ())
+  public static func queryCoins(coinModel: walletverse_ios_sdk.CoinModel, callback: @escaping (_ result: [walletverse_ios_sdk.CoinModel]?) -> ())
+  public static func queryChainCoins(callback: @escaping (_ result: [walletverse_ios_sdk.CoinModel]?) -> ())
+  public static func updateConfig(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> Swift.Void)
+  public static func toHex(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> Swift.Void)
+  public static func generateWid(appId: Swift.String?, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func generateWidWithWeb2(params: walletverse_ios_sdk.FederatedParams) -> Swift.String
+  public static func generateAccount(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> Swift.Void)
+  public static func generateMnemonic(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> Swift.Void)
+  public static func getPrivateKey(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> Swift.Void)
+  public static func getAddress(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> Swift.Void)
+  public static func validateAddress(params: walletverse_ios_sdk.ValidateAddressParams, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func validatePrivateKey(params: walletverse_ios_sdk.ValidatePrivateKeyParams, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func validateMnemonic(params: walletverse_ios_sdk.ValidateMnemonicParams, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func signMessage(params: walletverse_ios_sdk.SignMessageParams, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func signTransaction(params: walletverse_ios_sdk.SignTransactionParams, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func signAndTransaction(params: walletverse_ios_sdk.SignAndTransactionParams, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func transaction(params: walletverse_ios_sdk.TransactionParams, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func signDAppTransaction(params: walletverse_ios_sdk.SignTransactionParams, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func toChecksumAddress(params: Swift.String?, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func generateTransferData(params: Swift.String?, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func generateApproveData(params: Swift.String?, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func nonce(params: walletverse_ios_sdk.ChainNonce?, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func encodeERC20ABI(params: walletverse_ios_sdk.EncodeERC20ABIParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> ())
+  public static func balance(params: walletverse_ios_sdk.CoinBalance?, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func decimals(params: walletverse_ios_sdk.CoinDecimals?, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func fee(params: walletverse_ios_sdk.CoinFee?, callback: @escaping (_ result: walletverse_ios_sdk.ChainFeeModel?) -> ())
+  public static func gasPrice(params: walletverse_ios_sdk.ChainGasPrice?, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func blockNumber(params: Swift.String?, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func code(params: Swift.String?, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func receipt(params: Swift.String?, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func requestRPC(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> ())
+  public static func encodeMessage(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> Swift.Void)
+  public static func decodeMessage(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> Swift.Void)
+  public static func encodeAuth(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> Swift.Void)
+  public static func decodeAuth(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> Swift.Void)
+  public static func encodeShard(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> Swift.Void)
+  public static func decodeShard(params: walletverse_ios_sdk.JSCoreParams?, callback: @escaping (_ returnData: Any?, _ error: Swift.Error?) -> Swift.Void)
+  public static func getSupportChains(params: walletverse_ios_sdk.GetChainsParams, callback: @escaping (_ result: Swift.Array<walletverse_ios_sdk.Coin>?) -> ())
+  public static func getTokenList(params: walletverse_ios_sdk.TokenParams, callback: @escaping (_ result: Swift.Array<walletverse_ios_sdk.Coin>?) -> ())
+  public static func getToken(params: walletverse_ios_sdk.GetTokenParams, callback: @escaping (_ result: walletverse_ios_sdk.Coin?) -> ())
+  public static func getTransactionRecords(params: walletverse_ios_sdk.TransactionRecordParams, callback: @escaping (_ result: Swift.Array<walletverse_ios_sdk.TransactionRecord>?) -> ())
+  public static func getPrice(params: walletverse_ios_sdk.GetPriceParams, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func checkWalletExist(params: walletverse_ios_sdk.FederatedParams) -> Swift.Bool
+  public static func signInWeb2(params: walletverse_ios_sdk.FederatedParams, callback: @escaping (_ result: walletverse_ios_sdk.UserprofileModel?) -> ())
+  public static func createWeb2Wallet(params: walletverse_ios_sdk.CreateWeb2Params, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func restoreWeb2Wallet(params: walletverse_ios_sdk.RestoreWeb2Params, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func userCrypto(params: walletverse_ios_sdk.RestoreWeb2Params, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func getGraphicsCode(callback: @escaping (_ result: walletverse_ios_sdk.EmailCodeModel?) -> ())
+  public static func getEmailCode(params: walletverse_ios_sdk.EmailCodeParams, callback: @escaping (_ result: Swift.Bool) -> ())
+  public static func requestEmailVerify(params: walletverse_ios_sdk.EmailVerifyParams, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func initChain(params: walletverse_ios_sdk.InitChainParams, callback: @escaping (_ result: walletverse_ios_sdk.Coin?) -> ())
+  public static func getNftItems(params: walletverse_ios_sdk.NftItemsParams, callback: @escaping (_ result: Swift.Array<walletverse_ios_sdk.NftModel>?) -> ())
+  public static func getNftDetail(params: walletverse_ios_sdk.NftDetailParams, callback: @escaping (_ result: walletverse_ios_sdk.NftModel?) -> ())
+  public static func getNftTransferData(params: walletverse_ios_sdk.NftTransferDataParams, callback: @escaping (_ result: Swift.String?) -> ())
+  public static func getNftTokenURI(params: walletverse_ios_sdk.NftTokenURIParams, callback: @escaping (_ result: Swift.String?) -> ())
+  @objc deinit
+}
+open class DataTransform : walletverse_ios_sdk.TransformType {
+  public typealias Object = Foundation.Data
+  public typealias JSON = Swift.String
+  public init()
+  open func transformFromJSON(_ value: Any?) -> Foundation.Data?
+  open func transformToJSON(_ value: Foundation.Data?) -> Swift.String?
+  @objc deinit
+}
+extension Swift.Array {
+  public init(reserveCapacity: Swift.Int)
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  public init(hex: Swift.String)
+  public func toHexString() -> Swift.String
+}
+extension Swift.Array where Element == Swift.UInt8 {
+  @available(*, deprecated)
+  public func chunks(size chunksize: Swift.Int) -> Swift.Array<Swift.Array<Element>>
+}
+extension Swift.Array {
+  public func split(intoChunksOf chunkSize: Swift.Int) -> [[Element]]
+}
+extension Swift.String {
+  public func leftPadding(toLength: Swift.Int, withPad character: Swift.Character) -> Swift.String
+}
+public protocol HandyJSONCustomTransformable : walletverse_ios_sdk._ExtendCustomBasicType {
+}
+public protocol HandyJSON : walletverse_ios_sdk._ExtendCustomModelType {
+}
+public protocol HandyJSONEnum : walletverse_ios_sdk._RawEnumProtocol {
+}
+public typealias CustomMappingKeyValueTuple = (Swift.Int, walletverse_ios_sdk.MappingPropertyHandler)
+public class MappingPropertyHandler {
+  public init(rawPaths: [Swift.String]?, assignmentClosure: ((Any?) -> (Any?))?, takeValueClosure: ((Any?) -> (Any?))?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class HelpingMapper {
+  public func specify<T>(property: inout T, name: Swift.String)
+  public func specify<T>(property: inout T, converter: @escaping (Swift.String) -> T)
+  public func specify<T>(property: inout T, name: Swift.String?, converter: ((Swift.String) -> T)?)
+  public func exclude<T>(property: inout T)
+  @objc deinit
+}
+infix operator <-- : LogicalConjunctionPrecedence
+public func <-- <T>(property: inout T, name: Swift.String) -> walletverse_ios_sdk.CustomMappingKeyValueTuple
+public func <-- <T>(property: inout T, names: [Swift.String]) -> walletverse_ios_sdk.CustomMappingKeyValueTuple
+public func <-- <Transform>(property: inout Transform.Object, transformer: Transform) -> walletverse_ios_sdk.CustomMappingKeyValueTuple where Transform : walletverse_ios_sdk.TransformType
+public func <-- <Transform>(property: inout Transform.Object, transformer: (Swift.String?, Transform?)) -> walletverse_ios_sdk.CustomMappingKeyValueTuple where Transform : walletverse_ios_sdk.TransformType
+public func <-- <Transform>(property: inout Transform.Object, transformer: ([Swift.String], Transform?)) -> walletverse_ios_sdk.CustomMappingKeyValueTuple where Transform : walletverse_ios_sdk.TransformType
+public func <-- <Transform>(property: inout Transform.Object?, transformer: Transform) -> walletverse_ios_sdk.CustomMappingKeyValueTuple where Transform : walletverse_ios_sdk.TransformType
+public func <-- <Transform>(property: inout Transform.Object?, transformer: (Swift.String?, Transform?)) -> walletverse_ios_sdk.CustomMappingKeyValueTuple where Transform : walletverse_ios_sdk.TransformType
+public func <-- <Transform>(property: inout Transform.Object?, transformer: ([Swift.String], Transform?)) -> walletverse_ios_sdk.CustomMappingKeyValueTuple where Transform : walletverse_ios_sdk.TransformType
+infix operator <<< : AssignmentPrecedence
+public func <<< (mapper: walletverse_ios_sdk.HelpingMapper, mapping: walletverse_ios_sdk.CustomMappingKeyValueTuple)
+public func <<< (mapper: walletverse_ios_sdk.HelpingMapper, mappings: [walletverse_ios_sdk.CustomMappingKeyValueTuple])
+infix operator >>> : AssignmentPrecedence
+public func >>> <T>(mapper: walletverse_ios_sdk.HelpingMapper, property: inout T)
+public enum Currency : Swift.String {
+  case CNY
+  case USD
+  case KRW
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Language : Swift.String {
+  case ZH
+  case EN
+  case KO
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Unit : Swift.String {
+  case USDT
+  case USD
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Condition : Swift.String {
+  case ALL
+  case OUT
+  case IN
+  case FAIL
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Channel : Swift.String {
+  case Google
+  case Twitter
+  case FaceBook
+  case GitHub
+  case Discord
+  case Line
+  case KaKao
+  case Email
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class DefaultUtil : ObjectiveC.NSObject {
+  public static func initDefault()
+  public static func getValue(key: Swift.String) -> Any
+  public static func getBoolValue(key: Swift.String) -> Swift.Bool
+  public static func setValue(value: Any, key: Swift.String)
+  public static func clearValue(key: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public protocol _ExtendCustomModelType : walletverse_ios_sdk._Transformable {
+  init()
+  mutating func willStartMapping()
+  mutating func mapping(mapper: walletverse_ios_sdk.HelpingMapper)
+  mutating func didFinishMapping()
+}
+extension walletverse_ios_sdk._ExtendCustomModelType {
+  public mutating func willStartMapping()
+  public mutating func mapping(mapper: walletverse_ios_sdk.HelpingMapper)
+  public mutating func didFinishMapping()
+}
+extension Moya.MoyaProvider {
+  open func requestData<T>(_ target: Target, model: T.Type, completion: ((_ returnData: T?) -> Swift.Void)?) -> Moya.Cancellable? where T : walletverse_ios_sdk.HandyJSON
+  open func requestAll<T>(_ target: Target, model: T.Type, completion: ((_ returnData: T?) -> Swift.Void)?) -> Moya.Cancellable? where T : walletverse_ios_sdk.HandyJSON
+  open func requestAllDict(_ target: Target, completion: ((_ returnData: [Swift.String : Any]?) -> Swift.Void)?) -> Moya.Cancellable?
+}
+extension Swift.Array : walletverse_ios_sdk.HandyJSON {
+}
+extension Swift.Dictionary : walletverse_ios_sdk.HandyJSON {
+}
+@_silgen_name("swift_getTypeByMangledNameInContext")
+public func _getTypeByMangledNameInContext(_ name: Swift.UnsafePointer<Swift.UInt8>, _ nameLength: Swift.Int, genericContext: Swift.UnsafeRawPointer?, genericArguments: Swift.UnsafeRawPointer?) -> Any.Type?
+@_silgen_name("swift_getTypeContextDescriptor")
+public func _swift_getTypeContextDescriptor(_ metadata: Swift.UnsafeRawPointer?) -> Swift.UnsafeRawPointer?
+extension ObjectiveC.NSObject {
+  public static func swizzleMethodSDK(_ cls: Swift.AnyClass, originalSelector: ObjectiveC.Selector, swizzleSelector: ObjectiveC.Selector)
+}
+public var currentVCSDK: UIKit.UIViewController? {
+  get
+}
+public protocol TransformType {
+  associatedtype Object
+  associatedtype JSON
+  func transformFromJSON(_ value: Any?) -> Self.Object?
+  func transformToJSON(_ value: Self.Object?) -> Self.JSON?
+}
+public protocol _ExtendCustomBasicType : walletverse_ios_sdk._Transformable {
+  static func _transform(from object: Any) -> Self?
+  func _plainValue() -> Any?
+}
+public protocol _Transformable : walletverse_ios_sdk._Measurable {
+}
+public protocol _Measurable {
+}
+open class TransformOf<ObjectType, JSONType> : walletverse_ios_sdk.TransformType {
+  public typealias Object = ObjectType
+  public typealias JSON = JSONType
+  public init(fromJSON: @escaping (JSONType?) -> ObjectType?, toJSON: @escaping (ObjectType?) -> JSONType?)
+  open func transformFromJSON(_ value: Any?) -> ObjectType?
+  open func transformToJSON(_ value: ObjectType?) -> JSONType?
+  @objc deinit
+}
+public class JSCoreParams : walletverse_ios_sdk.HandyJSON {
+  public var parmeters: [Swift.String : Any]?
+  required public init()
+  public func putOther(key: Swift.String, value: Any)
+  public func put(key: Swift.String, value: Any) -> walletverse_ios_sdk.JSCoreParams?
+  @objc deinit
+}
+public struct DeserializeOptions : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public static let caseInsensitive: walletverse_ios_sdk.DeserializeOptions
+  public static let defaultOptions: walletverse_ios_sdk.DeserializeOptions
+  public init(rawValue: Swift.Int)
+  public typealias ArrayLiteralElement = walletverse_ios_sdk.DeserializeOptions
+  public typealias Element = walletverse_ios_sdk.DeserializeOptions
+  public typealias RawValue = Swift.Int
+}
+public enum DebugMode : Swift.Int {
+  case verbose
+  case debug
+  case error
+  case none
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public struct HandyJSONConfiguration {
+  public static var debugMode: walletverse_ios_sdk.DebugMode {
+    get
+    set
+  }
+  public static var deserializeOptions: walletverse_ios_sdk.DeserializeOptions
+}
+open class EnumTransform<T> : walletverse_ios_sdk.TransformType where T : Swift.RawRepresentable {
+  public typealias Object = T
+  public typealias JSON = T.RawValue
+  public init()
+  open func transformFromJSON(_ value: Any?) -> T?
+  open func transformToJSON(_ value: T?) -> T.RawValue?
+  @objc deinit
+}
+extension Swift.String : walletverse_ios_sdk._Transformable {}
+extension Swift.Int : walletverse_ios_sdk._Transformable {}
+extension Foundation.NSString : walletverse_ios_sdk._Transformable {}
+extension Foundation.NSNumber : walletverse_ios_sdk._Transformable {}
+extension Foundation.NSArray : walletverse_ios_sdk._Transformable {}
+extension Foundation.NSDictionary : walletverse_ios_sdk._Transformable {}
+extension walletverse_ios_sdk.Currency : Swift.Equatable {}
+extension walletverse_ios_sdk.Currency : Swift.Hashable {}
+extension walletverse_ios_sdk.Currency : Swift.RawRepresentable {}
+extension walletverse_ios_sdk.Language : Swift.Equatable {}
+extension walletverse_ios_sdk.Language : Swift.Hashable {}
+extension walletverse_ios_sdk.Language : Swift.RawRepresentable {}
+extension walletverse_ios_sdk.Unit : Swift.Equatable {}
+extension walletverse_ios_sdk.Unit : Swift.Hashable {}
+extension walletverse_ios_sdk.Unit : Swift.RawRepresentable {}
+extension walletverse_ios_sdk.Condition : Swift.Equatable {}
+extension walletverse_ios_sdk.Condition : Swift.Hashable {}
+extension walletverse_ios_sdk.Condition : Swift.RawRepresentable {}
+extension walletverse_ios_sdk.Channel : Swift.Equatable {}
+extension walletverse_ios_sdk.Channel : Swift.Hashable {}
+extension walletverse_ios_sdk.Channel : Swift.RawRepresentable {}
+extension Swift.UInt : walletverse_ios_sdk._Transformable {}
+extension Swift.Int8 : walletverse_ios_sdk._Transformable {}
+extension Swift.Int16 : walletverse_ios_sdk._Transformable {}
+extension Swift.Int32 : walletverse_ios_sdk._Transformable {}
+extension Swift.Int64 : walletverse_ios_sdk._Transformable {}
+extension Swift.UInt8 : walletverse_ios_sdk._Transformable {}
+extension Swift.UInt16 : walletverse_ios_sdk._Transformable {}
+extension Swift.UInt32 : walletverse_ios_sdk._Transformable {}
+extension Swift.UInt64 : walletverse_ios_sdk._Transformable {}
+extension Swift.Bool : walletverse_ios_sdk._Transformable {}
+extension Swift.Float : walletverse_ios_sdk._Transformable {}
+extension Swift.Double : walletverse_ios_sdk._Transformable {}
+extension Swift.Optional : walletverse_ios_sdk._Transformable {}
+extension Swift.Set : walletverse_ios_sdk._Transformable {}
+extension walletverse_ios_sdk.DebugMode : Swift.Equatable {}
+extension walletverse_ios_sdk.DebugMode : Swift.Hashable {}
+extension walletverse_ios_sdk.DebugMode : Swift.RawRepresentable {}
