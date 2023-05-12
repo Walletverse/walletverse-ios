@@ -6,8 +6,6 @@
 //  Copyright © 2022 Coin. All rights reserved.
 //
 
-import GRDB
-
 public class WalletCoinModel: Record, NSCoding {
     
     public var id : Int64?
