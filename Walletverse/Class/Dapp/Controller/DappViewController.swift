@@ -97,6 +97,9 @@ class DappViewController: BaseViewController {
         let dappModel12 = DappModel(wid: UserDefaultUtil.getValue(key: ZUSERDEFAULT_CURRENTWALLET) as? String, name: "ABEY-RevoMarketplace", url: "https://abeynft.revoland.com/RevoMarketplace", chain: "ABEY")
         dappList?.append(dappModel12)
         
+        let dappModel13 = DappModel(wid: UserDefaultUtil.getValue(key: ZUSERDEFAULT_CURRENTWALLET) as? String, name: "MAPO-HiveSwap", url: "https://swap.hiveswap.io/#/swap", chain: "MAPO")
+        dappList?.append(dappModel13)
+        
         self.mainTableV.reloadData()
         
         Walletverse.queryChainCoins() { (result) in
